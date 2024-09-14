@@ -146,7 +146,8 @@ def prepare_data():
         data = data.join(df.set_index(key), on=key, rsuffix="_complete_default")
 
         print('Computing coverage')
-        data['Coverage'] = data['CoveredInteractions'] / data['CoveredInteractions_complete_metric']
+        #data['Coverage'] = data['CoveredInteractions'] / data['CoveredInteractions_complete_metric']
+        data['Coverage'] = data.apply(calc_coverage, axis=1)
         data['CoverageDiff'] = data['Coverage'] - (data['CoveredInteractions_default'] / data['CoveredInteractions_complete_default'])
         data['InteractionReduction'] = data['CoveredInteractions'] / data['CoveredInteractions_default']
         data['RelaltivePartialSize'] = data['PartialSampleSize'] / data['Size']
@@ -202,8 +203,12 @@ def prepare_data():
 
 
 def get_metric(row):
-    metric =(('c ' if row['Core'] == True else '') + ('d ' if row['Dead'] == True else '') + ('con ' if row['Abstract'] == 'abstrakt' else '') + ('a ' if row['Abstract'] == 'concrete' else '') + ('afs ' if row['Atomic'] == 'features' else '') + ('als ' if row['Atomic'] == 'literals' else '') + ('pc ' if row['PC'] == True else '') + ('efi ' if row['Equal'] == True else '')).strip().replace(' ', '_')
+    metric =(('c ' if row['Core'] == True else '') + ('d ' if row['Dead'] == True else '') + ('a ' if row['Abstract'] == 'abstrakt' else '') + ('con ' if row['Abstract'] == 'concrete' else '') + ('afs ' if row['Atomic'] == 'features' else '') + ('als ' if row['Atomic'] == 'literals' else '') + ('pc ' if row['PC'] == True else '') + ('efi ' if row['Equal'] == True else '')).strip().replace(' ', '_')
     return 'default' if not metric else metric
+
+
+def calc_coverage(row):
+    return (row['CoveredInteractions'] / row['CoveredInteractions_complete_metric']) if row['CoveredInteractions_complete_metric'] != 0 else 0
 
 
 def add_times(row):
@@ -348,7 +353,7 @@ def plot_interaction_reduction_per_system():
     'VariableCount': top,
     'InteractionReduction': 'median'}).reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['c_d_als_pc','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['c_d','c_d_a_als_pc'])]
     df_plot = df_plot.dropna()
     df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
 
@@ -357,7 +362,8 @@ def plot_interaction_reduction_per_system():
         + geom_point()
         + theme(axis_text_x=element_text(rotation=45, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
-        + scale_colour_manual(values = ('blue', 'orange', 'green'))
+        + scale_colour_manual(values = ('blue', 'green'))
+        + scale_shape_manual(values = ('o', '^'))
         + xlab("Number of Features")
         + ylab("Interaction Ratio")
         + ggtitle("Number of Interactions Relative to Default Metric")
@@ -406,8 +412,8 @@ def plot_coverage_per_partial_sample_size():
     df_plot = data[data['T'] == 2]
 
     df_plot = df_plot.groupby(['SystemName', 'Metric', 'PartialSampleSize'], observed=True).agg({
-    'Coverage': np.median,
-    'RelaltivePartialSize': np.median}).reset_index()
+    'Coverage': 'median',
+    'RelaltivePartialSize': 'median'}).reset_index()
 
     df_plot = df_plot[df_plot['Metric'].isin(['default', 'c_d_a_als_pc'])]
     df_plot = df_plot.dropna()
@@ -454,11 +460,11 @@ if __name__ == "__main__":
     ]))
 
     print('Ploting')
-    plot_system_statistics()
-    plot_coverage_per_system()
-    plot_coverage_per_metric()
-    plot_relative_coverage_per_metric()
-    plot_interaction_reduction_per_metric()
+    #plot_system_statistics()
+    #plot_coverage_per_system()
+    #plot_coverage_per_metric()
+    #plot_relative_coverage_per_metric()
+    #plot_interaction_reduction_per_metric()
     plot_interaction_reduction_per_system()
     plot_variable_reduction_per_metric()
     plot_coverage_per_partial_sample_size()
