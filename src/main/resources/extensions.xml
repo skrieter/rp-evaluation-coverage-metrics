@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+  <point id="de.featjar.base.cli.Commands">
+    <extension id="de.featjar.evaluation.coverage.phase.PrepareFeatureModelPhase" />
+    <extension id="de.featjar.evaluation.coverage.phase.MeasureAnalysisTimePhase" />
+    <extension id="de.featjar.evaluation.coverage.phase.CoveragePhase" />
+    <extension id="de.featjar.evaluation.coverage.phase.PartialCoveragePhase" />
+    <extension id="de.featjar.evaluation.coverage.phase.SamplePhase" />
+    <extension id="de.featjar.analysis.sat4j.cli.CoreCommand" />
+    <extension id="de.featjar.analysis.sat4j.cli.AtomicSetsCommand" />
+    <extension id="de.featjar.analysis.sat4j.cli.SolutionsCommand" />
+    <extension id="de.featjar.analysis.sat4j.cli.SolutionCountCommand" />
+    <extension id="de.featjar.analysis.sat4j.cli.TWiseCommand" />
+    <extension id="de.featjar.analysis.sat4j.cli.ProjectionCommand" />
+    <extension id="de.featjar.formula.cli.ConvertCNFFormatCommand" />
+    <extension id="de.featjar.formula.cli.ConvertFormatCommand" />
+    <extension id="de.featjar.formula.cli.PrintCommand" />
+    <extension id="de.featjar.evaluation.OutputCleaner" />
+  </point>
+  <point id="de.featjar.formula.io.FormulaFormats">
+    <extension id="de.featjar.formula.io.dimacs.FormulaDimacsFormat" />
+    <extension id="de.featjar.formula.io.xml.XMLFeatureModelCNFFormulaFormat" />
+    <extension id="de.featjar.formula.io.KConfigReaderFormat" />
+  </point>
+  <point id="de.featjar.formula.io.BooleanAssignmentGroupsFormats">
+    <extension id="de.featjar.formula.io.dimacs.BooleanAssignmentGroupsDimacsFormat" />
+    <extension id="de.featjar.formula.io.csv.BooleanAssignmentGroupsCSVFormat" />
+    <extension id="de.featjar.formula.io.binary.BooleanAssignmentGroupsBinaryFormat" />
+  </point>
+  <point id="de.featjar.base.extension.Initializers">
+    <extension id="de.featjar.base.log.ConfigurableLog" />
+    <extension id="de.featjar.base.computation.Cache" />
+  </point>
+</extensions>

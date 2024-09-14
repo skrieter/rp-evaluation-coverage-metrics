@@ -1,0 +1,50 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version "8.1.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+group = 'de.featjar'
+version = '1.0'
+
+dependencies {
+    implementation 'net.tascalate:net.tascalate.concurrent:0.9.6'
+    implementation 'org.ow2.sat4j:org.ow2.sat4j.core:2.3.6'
+}
+
+application {
+    mainClass = 'de.featjar.base.FeatJAR'
+}
+
+jar {
+  manifest {
+    attributes(
+      'Main-Class': 'de.featjar.base.FeatJAR'
+    )
+  }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.ORACLE
+    }
+    sourceCompatibility = 1.11
+}
+
+task setupModels(type: Copy) {
+    onlyIf{ !file('models').exists() }
+    from zipTree('models.zip')
+    into projectDir
+    eachFile {
+        if (it.relativePath.getFile(destinationDir).exists()) {
+            it.exclude()
+        }
+    }
+}
+
+assemble.finalizedBy setupModels
