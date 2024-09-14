@@ -125,7 +125,7 @@ public class PrepareFeatureModelPhase extends Evaluator {
             BooleanAssignment abstractVariables = abstractFeature.isPresent()
                     ? new BooleanAssignment(variables.getVariableIndices(
                             abstractFeature.get().lines().collect(Collectors.toList())))
-                    : allVariables;
+                    : new BooleanAssignment();
             BooleanAssignment concreteVariables = allVariables.removeAll(abstractVariables);
             concreteGroup.add(abstractVariables);
             concreteGroup.add(concreteVariables);
