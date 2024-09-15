@@ -158,7 +158,19 @@ def prepare_data():
 
         metrics = readCSVs("metric.csv", dtype_metrics)
         metrics['Metric'] = metrics.apply(get_metric, axis=1)
-        metric_order = metrics.groupby('Metric', observed=True)['MetricID'].apply(top).sort_values(ascending=True).index.tolist()
+        # metric_order = metrics.groupby('Metric', observed=True)['MetricID'].apply(top).sort_values(ascending=True).index.tolist()
+        metric_order = ["default","CF","DF","AF","AFS","ALS","PCI",
+                        "CF-DF","CF-AF","CF-AFS","CF-ALS","CF-PCI",
+                        "DF-AF","DF-AFS","DF-ALS","DF-PCI",
+                        "AF-AFS","AF-ALS","AF-PCI",
+                        "AFS-PCI","ALS-PCI",
+                        "CF-DF-AF","CF-DF-AFS","CF-DF-ALS","CF-DF-PCI","CF-AF-AFS","CF-AF-ALS","CF-AF-PCI","CF-AFS-PCI","CF-ALS-PCI",
+                        "DF-AF-AFS","DF-AF-ALS","DF-AF-PCI","DF-AFS-PCI","DF-ALS-PCI",
+                        "AF-AFS-PCI","AF-ALS-PCI",
+                        "CF-DF-AF-AFS","CF-DF-AF-ALS","CF-DF-AF-PCI","CF-DF-AFS-PCI","CF-DF-ALS-PCI",
+                        "DF-AF-AFS-PCI","DF-AF-ALS-PCI",
+                        "CF-DF-AF-AFS-PCI","CF-DF-AF-ALS-PCI"
+                        ]
 
         metrics['Metric'] = pd.Categorical(metrics['Metric'], categories=metric_order, ordered=True)
         metrics = metrics.set_index('MetricID')
@@ -318,7 +330,7 @@ def plot_coverage_per_metric():
 def plot_relative_coverage_per_metric():
     df_plot = data.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['CoverageDiff'].median().reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['CF_DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('plot_relative_coverage_per_metric', (
         ggplot(df_plot, aes('Metric', 'CoverageDiff'))
