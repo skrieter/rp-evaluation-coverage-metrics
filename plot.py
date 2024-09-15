@@ -370,6 +370,30 @@ def plot_interaction_reduction_per_system():
     ), 1)
 
 
+def plot_interactions_per_system():
+    df_plot = data[data['Size'] == data['PartialSampleSize']]
+    df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True).agg({
+    'VariableCount': top,
+    'CoveredInteractions': 'median'}).reset_index()
+
+    df_plot = df_plot[df_plot['Metric'].isin(['c_d_a_als_pc','default'])]
+    df_plot = df_plot.dropna()
+    df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
+
+    create_plot('plot_interactions_per_system', (
+        ggplot(df_plot, aes('VariableCount', 'CoveredInteractions', color='Metric', shape='Metric'))
+        + geom_point()
+        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+        + scale_colour_manual(values = ('blue', 'green', 'red'))
+        + scale_shape_manual(values = ('o', '+', '^'))
+        + scale_y_log10()
+        + xlab("Number of Features")
+        + ylab("Interactions")
+        + ggtitle("Number of Interactions")
+    ), 1)
+
+
 def plot_variable_reduction_per_metric():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'Metric'], observed=True).agg({
@@ -390,13 +414,13 @@ def plot_variable_reduction_per_metric():
     ), 1)
 
 
-def plot_time_per_metric():
+def plot_metric_time_per_metric():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['MetricTime'].median().reset_index()
 
     df_plot = df_plot[df_plot['Metric'].isin(['default','c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
 
-    create_plot('plot_time_per_metric', (
+    create_plot('plot_metric_time_per_metric', (
         ggplot(df_plot, aes('Metric', 'MetricTime'))
         + geom_boxplot()
         + theme(axis_text_x=element_text(rotation=45, hjust=1))
@@ -404,7 +428,57 @@ def plot_time_per_metric():
         + scale_y_log10()
         + xlab("Metric")
         + ylab("Computation Time (s)")
-        + ggtitle("Computation Time of each Metric")
+        + ggtitle("Metric Computation Time of each Metric")
+    ), 1)
+
+
+def plot_metric_time_per_system():
+    df_plot = data[data['Size'] == data['PartialSampleSize']]
+    df_plot = df_plot.groupby(['SystemName', 'T', 'SystemIteration', 'ShuffleIteration'], observed=True)    ['MetricTime'].median().reset_index()
+
+    create_plot('plot_metric_time_per_system', (
+        ggplot(df_plot, aes('SystemName', 'MetricTime'))
+        + geom_boxplot()
+        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+        + scale_y_log10()
+        + xlab("System")
+        + ylab("Computation Time (s)")
+        + ggtitle("Metric Computation Time for each System")
+    ), 1)
+
+
+def plot_coverage_time_per_metric():
+    df_plot = data[data['Size'] == data['PartialSampleSize']]
+    df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['CoverageTime'].median().reset_index()
+
+    df_plot = df_plot[df_plot['Metric'].isin(['default','c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
+
+    create_plot('plot_coverage_time_per_metric', (
+        ggplot(df_plot, aes('Metric', 'CoverageTime'))
+        + geom_boxplot()
+        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+        + scale_y_log10()
+        + xlab("Metric")
+        + ylab("Computation Time (s)")
+        + ggtitle("Coverage Computation Time of each Metric")
+    ), 1)
+
+
+def plot_coverage_time_per_system():
+    df_plot = data[data['Size'] == data['PartialSampleSize']]
+    df_plot = df_plot.groupby(['SystemName', 'T', 'SystemIteration', 'ShuffleIteration'], observed=True)    ['CoverageTime'].median().reset_index()
+
+    create_plot('plot_coverage_time_per_system', (
+        ggplot(df_plot, aes('SystemName', 'CoverageTime'))
+        + geom_boxplot()
+        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+        + scale_y_log10()
+        + xlab("System")
+        + ylab("Computation Time (s)")
+        + ggtitle("Coverage Computation Time for each System")
     ), 1)
 
 
@@ -464,9 +538,13 @@ if __name__ == "__main__":
     plot_coverage_per_system()
     plot_coverage_per_metric()
     plot_relative_coverage_per_metric()
+    plot_interactions_per_system()
     plot_interaction_reduction_per_metric()
     plot_interaction_reduction_per_system()
     plot_variable_reduction_per_metric()
     plot_coverage_per_partial_sample_size()
-    plot_time_per_metric()
+    plot_metric_time_per_metric()
+    plot_metric_time_per_system()
+    plot_coverage_time_per_metric()
+    plot_coverage_time_per_system()
     print('Finished')
