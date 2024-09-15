@@ -159,6 +159,7 @@ def prepare_data():
         metrics = readCSVs("metric.csv", dtype_metrics)
         metrics['Metric'] = metrics.apply(get_metric, axis=1)
         metric_order = metrics.groupby('Metric', observed=True)['MetricID'].apply(top).sort_values(ascending=True).index.tolist()
+
         metrics['Metric'] = pd.Categorical(metrics['Metric'], categories=metric_order, ordered=True)
         metrics = metrics.set_index('MetricID')
         data = data.join(metrics, on='MetricID', rsuffix="_")
@@ -203,7 +204,7 @@ def prepare_data():
 
 
 def get_metric(row):
-    metric =(('CF ' if row['Core'] == True else '') + ('DF ' if row['Dead'] == True else '') + ('AF ' if row['Abstract'] == 'abstrakt' else '') + ('ConF ' if row['Abstract'] == 'concrete' else '') + ('AFS ' if row['Atomic'] == 'features' else '') + ('ALS ' if row['Atomic'] == 'literals' else '') + ('PC ' if row['PC'] == True else '') + ('EFI ' if row['Equal'] == True else '')).strip().replace(' ', '-')
+    metric =(('CF ' if row['Core'] == True else '') + ('DF ' if row['Dead'] == True else '') + ('AF ' if row['Abstract'] == 'abstrakt' else '') + ('ConF ' if row['Abstract'] == 'concrete' else '') + ('AFS ' if row['Atomic'] == 'features' else '') + ('ALS ' if row['Atomic'] == 'literals' else '') + ('PCI ' if row['PC'] == True else '') + ('EFI ' if row['Equal'] == True else '')).strip().replace(' ', '-')
     return 'default' if not metric else metric
 
 
@@ -301,7 +302,7 @@ def plot_coverage_per_system():
 def plot_coverage_per_metric():
     df_plot = data.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['Coverage'].median().reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['default','c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['default','CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('plot_coverage_per_metric', (
         ggplot(df_plot, aes('Metric', 'Coverage'))
@@ -317,7 +318,7 @@ def plot_coverage_per_metric():
 def plot_relative_coverage_per_metric():
     df_plot = data.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['CoverageDiff'].median().reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['CF_DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('plot_relative_coverage_per_metric', (
         ggplot(df_plot, aes('Metric', 'CoverageDiff'))
@@ -334,7 +335,7 @@ def plot_interaction_reduction_per_metric():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['InteractionReduction'].median().reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['default','c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['default','CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('plot_interaction_reduction_per_metric', (
         ggplot(df_plot, aes('Metric', 'InteractionReduction'))
@@ -350,23 +351,23 @@ def plot_interaction_reduction_per_metric():
 def plot_interaction_reduction_per_system():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True).agg({
-    'VariableCount': top,
-    'InteractionReduction': 'median'}).reset_index()
+        'VariableCount': top,
+        'InteractionReduction': 'median'}).reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['c_d_a_als_pc','c_d'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['CF-DF-AF-ALS-PCI','CF-DF'])]
     df_plot = df_plot.dropna()
     df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
 
     create_plot('plot_interaction_reduction_per_system', (
-        ggplot(df_plot, aes('VariableCount', 'InteractionReduction', color='Metric', shape='Metric'))
-        + geom_point()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
-        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
-        + scale_colour_manual(values = ('blue', 'green', 'red'))
-        + scale_shape_manual(values = ('o', '+', '^'))
-        + xlab("Number of Features")
-        + ylab("Interaction Ratio")
-        + ggtitle("Number of Interactions Relative to Default Metric")
+            ggplot(df_plot, aes('VariableCount', 'InteractionReduction', color='Metric', shape='Metric'))
+            + geom_point()
+            + theme(axis_text_x=element_text(rotation=45, hjust=1))
+            + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+            + scale_colour_manual(values = ('blue', 'green', 'red'))
+            + scale_shape_manual(values = ('o', '+', '^'))
+            + xlab("Number of Features")
+            + ylab("Interaction Ratio")
+            + ggtitle("Number of Interactions Relative to Default Metric")
     ), 1)
 
 
@@ -376,7 +377,7 @@ def plot_interactions_per_system():
     'VariableCount': top,
     'CoveredInteractions': 'median'}).reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['c_d_a_als_pc','default'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['CF-DF-AF-ALS-PCI','default'])]
     df_plot = df_plot.dropna()
     df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
 
@@ -400,7 +401,7 @@ def plot_variable_reduction_per_metric():
     'VariableCount': top,
     'FilteredVariableCount': top}).reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['c_d','a','als','c_d_als','pc','c_d_a_als'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS'])]
 
     df_plot['VariableReduction'] = df_plot['FilteredVariableCount'] / df_plot['VariableCount']
 
@@ -418,7 +419,7 @@ def plot_metric_time_per_metric():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['MetricTime'].median().reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['default','c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['default','CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('plot_metric_time_per_metric', (
         ggplot(df_plot, aes('Metric', 'MetricTime'))
@@ -452,7 +453,7 @@ def plot_coverage_time_per_metric():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['CoverageTime'].median().reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['default','c_d','a','als','c_d_als','pc','c_d_a_als','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['default','CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('plot_coverage_time_per_metric', (
         ggplot(df_plot, aes('Metric', 'CoverageTime'))
@@ -468,7 +469,7 @@ def plot_coverage_time_per_metric():
 
 def plot_coverage_time_per_system():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
-    df_plot = df_plot.groupby(['SystemName', 'T', 'SystemIteration', 'ShuffleIteration'], observed=True)    ['CoverageTime'].median().reset_index()
+    df_plot = df_plot.groupby(['SystemName', 'T', 'SystemIteration', 'ShuffleIteration'], observed=True)['CoverageTime'].median().reset_index()
 
     create_plot('plot_coverage_time_per_system', (
         ggplot(df_plot, aes('SystemName', 'CoverageTime'))
@@ -489,18 +490,18 @@ def plot_coverage_per_partial_sample_size():
     'Coverage': 'median',
     'RelaltivePartialSize': 'median'}).reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['default', 'c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['default', 'CF-DF-AF-ALS-PCI'])]
     df_plot = df_plot.dropna()
     df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
 
     df_test = df_plot.pivot(index=['SystemName', 'PartialSampleSize'], columns='Metric', values='Coverage').reset_index()
-    df_test = df_test[['SystemName', 'default', 'c_d_a_als_pc']]
+    df_test = df_test[['SystemName', 'default', 'CF-DF-AF-ALS-PCI']]
 
     df_plot['p'] = 1.0
     system_names = df_test['SystemName'].unique()
     for system_name in system_names:
         df_test_filter = df_test[df_test['SystemName'] == system_name]
-        stat, p = ttest_rel(df_test_filter['default'], df_test_filter['c_d_a_als_pc'])
+        stat, p = ttest_rel(df_test_filter['default'], df_test_filter['CF-DF-AF-ALS-PCI'])
         df_plot.loc[df_plot['SystemName'] == system_name, 'p'] = p
     df_plot = df_plot[df_plot['p'] < 0.05]
 
