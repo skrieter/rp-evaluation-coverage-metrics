@@ -31,7 +31,7 @@ class Config:
 
         self.out_dir_name = self.root_dir_name + '/plot/'
 
-        self.show_results = True
+        self.show_results = False
         self.save_results = True
         self.pdf_width = 400
         self.pdf_height = 200
@@ -353,7 +353,7 @@ def plot_interaction_reduction_per_system():
     'VariableCount': top,
     'InteractionReduction': 'median'}).reset_index()
 
-    df_plot = df_plot[df_plot['Metric'].isin(['c_d','c_d_a_als_pc'])]
+    df_plot = df_plot[df_plot['Metric'].isin(['c_d_a_als_pc','c_d'])]
     df_plot = df_plot.dropna()
     df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
 
@@ -362,8 +362,8 @@ def plot_interaction_reduction_per_system():
         + geom_point()
         + theme(axis_text_x=element_text(rotation=45, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
-        + scale_colour_manual(values = ('blue', 'green'))
-        + scale_shape_manual(values = ('o', '^'))
+        + scale_colour_manual(values = ('blue', 'green', 'red'))
+        + scale_shape_manual(values = ('o', '+', '^'))
         + xlab("Number of Features")
         + ylab("Interaction Ratio")
         + ggtitle("Number of Interactions Relative to Default Metric")
@@ -422,7 +422,7 @@ def plot_coverage_per_partial_sample_size():
     df_test = df_plot.pivot(index=['SystemName', 'PartialSampleSize'], columns='Metric', values='Coverage').reset_index()
     df_test = df_test[['SystemName', 'default', 'c_d_a_als_pc']]
 
-    df_plot['p'] = 1
+    df_plot['p'] = 1.0
     system_names = df_test['SystemName'].unique()
     for system_name in system_names:
         df_test_filter = df_test[df_test['SystemName'] == system_name]
@@ -460,11 +460,11 @@ if __name__ == "__main__":
     ]))
 
     print('Ploting')
-    #plot_system_statistics()
-    #plot_coverage_per_system()
-    #plot_coverage_per_metric()
-    #plot_relative_coverage_per_metric()
-    #plot_interaction_reduction_per_metric()
+    plot_system_statistics()
+    plot_coverage_per_system()
+    plot_coverage_per_metric()
+    plot_relative_coverage_per_metric()
+    plot_interaction_reduction_per_metric()
     plot_interaction_reduction_per_system()
     plot_variable_reduction_per_metric()
     plot_coverage_per_partial_sample_size()
