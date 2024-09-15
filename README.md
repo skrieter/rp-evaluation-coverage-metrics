@@ -64,7 +64,7 @@ source python_plot_environment/bin/activate
 ### Run
 The evaluation is run in multiple phases. To run a phase execute the follwing gradle task:
 ```
-./gradlew run --args="--config_dir config_default --config <phase_name>"
+./gradlew run --args="--config_dir config --config <phase_name>"
 ```
 
 The following phases exist and should be run in order for the complete evaluation:
