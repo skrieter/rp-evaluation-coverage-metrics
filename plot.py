@@ -203,7 +203,7 @@ def prepare_data():
 
 
 def get_metric(row):
-    metric =(('c ' if row['Core'] == True else '') + ('d ' if row['Dead'] == True else '') + ('a ' if row['Abstract'] == 'abstrakt' else '') + ('con ' if row['Abstract'] == 'concrete' else '') + ('afs ' if row['Atomic'] == 'features' else '') + ('als ' if row['Atomic'] == 'literals' else '') + ('pc ' if row['PC'] == True else '') + ('efi ' if row['Equal'] == True else '')).strip().replace(' ', '_')
+    metric =(('CF ' if row['Core'] == True else '') + ('DF ' if row['Dead'] == True else '') + ('AF ' if row['Abstract'] == 'abstrakt' else '') + ('ConF ' if row['Abstract'] == 'concrete' else '') + ('AFS ' if row['Atomic'] == 'features' else '') + ('ALS ' if row['Atomic'] == 'literals' else '') + ('PC ' if row['PC'] == True else '') + ('EFI ' if row['Equal'] == True else '')).strip().replace(' ', '-')
     return 'default' if not metric else metric
 
 
