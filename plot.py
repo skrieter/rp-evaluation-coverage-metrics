@@ -242,7 +242,7 @@ def create_out_dir():
             os.exit(-1)
 
 
-def create_plot(name, p, factor):
+def create_plot(name, p, ratio, width=400, height=200):
     create_out_dir()
 
     if config.show_results:
@@ -251,7 +251,7 @@ def create_plot(name, p, factor):
     if config.save_results:
         file_name = config.out_dir_name + name + '.pdf'
         print('Writing ' + file_name)
-        p.save(file_name, verbose = False, width = config.pdf_width, height = config.pdf_height, units = 'mm', dpi = 300)
+        p.save(file_name, verbose = False, width = width, height = height, units = 'mm', dpi = 300)
 
 
 def create_csv(df, name):
@@ -283,6 +283,12 @@ def plot_system_statistics():
         + geom_point()
         + xlab("Number of Features")
         + ylab("Number of Clauses in CNF")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #        + ggtitle("Feature Model Statistics")
     ), 1)
 
@@ -293,6 +299,12 @@ def plot_system_core():
         + geom_point()
         + xlab("Number of Features")
         + ylab("Number of Clauses in CNF")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #        + ggtitle("Feature Model Statistics")
     ), 1)
 
@@ -303,10 +315,16 @@ def plot_coverage_per_system():
     create_plot('coverage_per_system', (
         ggplot(df_plot, aes('SystemName', 'Coverage'))
         + geom_point()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
         + xlab("Feature Model")
         + ylab("Interaction Reduction")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #        + ggtitle("Coverage per Feature Model")
     ), 1)
 
@@ -319,10 +337,16 @@ def plot_coverage_per_metric():
     create_plot('coverage_per_metric', (
         ggplot(df_plot, aes('Metric', 'Coverage'))
         + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
         + xlab("Metric")
         + ylab("Coverage")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
         + scale_y_continuous(breaks=[0.5,0.6,0.8,1.0],labels = ['50%','60%','80%','100%'], limits=(0.5, 1.0))
 #        + ggtitle("Coverage per Metric")
     ), 1)
@@ -336,10 +360,16 @@ def plot_relative_coverage_per_metric():
     create_plot('relative_coverage_per_metric', (
         ggplot(df_plot, aes('Metric', 'CoverageDiff'))
         + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
         + xlab("Metric")
         + ylab("Coverage Difference")
+        + scale_y_continuous(labels=lambda l: ["%d%%" % (v * 100) for v in l])
+        + theme(
+            axis_title_x=element_text(size=16),
+            axis_title_y=element_text(size=16),
+            strip_text_x=element_text(size=14)
+        )
 #        + ggtitle("Difference in Coverage Compared to Default Metric")
     ), 1)
 
@@ -347,17 +377,43 @@ def plot_relative_coverage_per_metric():
 def plot_interaction_reduction_per_metric():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
     df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['InteractionReduction'].median().reset_index()
-    df_plot = df_plot[df_plot["T"] == 3]
     df_plot = df_plot[df_plot['Metric'].isin(['CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
 
     create_plot('interaction_reduction_per_metric', (
         ggplot(df_plot, aes('Metric', 'InteractionReduction'))
         + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
         + xlab("Metric")
         + ylab("Interaction Ratio")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #       + ggtitle("Number of Interactions Relative to Default Metric")
+    ), 1)
+
+def plot_interaction_reduction_per_metric_t2():
+    df_plot = data[(data['Size'] == data['PartialSampleSize']) & (data['T'] == 2)]
+    df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['InteractionReduction'].median().reset_index()
+    df_plot = df_plot[df_plot['Metric'].isin(['CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
+
+    create_plot('interaction_reduction_per_metric_t2', (
+            ggplot(df_plot, aes('Metric', 'InteractionReduction'))
+            + geom_boxplot()
+            + theme(axis_text_x=element_text(rotation=30, hjust=1))
+            + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+            + xlab("Metric")
+            + ylab("Interaction Ratio")
+            + theme(
+                axis_title_x=element_text(size=14),
+                axis_title_y=element_text(size=14),
+                strip_text_x=element_text(size=12),
+                text=element_text(size=12)
+            )
+        #       + ggtitle("Number of Interactions Relative to Default Metric")
     ), 1)
 
 
@@ -374,12 +430,18 @@ def plot_interaction_reduction_per_system():
     create_plot('interaction_reduction_per_system', (
             ggplot(df_plot, aes('VariableCount', 'InteractionReduction', color='Metric', shape='Metric'))
             + geom_point()
-            + theme(axis_text_x=element_text(rotation=45, hjust=1))
+            + theme(axis_text_x=element_text(rotation=30, hjust=1))
             + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
             + scale_colour_manual(values = ('blue', 'green', 'red'))
             + scale_shape_manual(values = ('o', '+', '^'))
             + xlab("Number of Features")
             + ylab("Interaction Ratio")
+            + theme(
+                axis_title_x=element_text(size=14),
+                axis_title_y=element_text(size=14),
+                strip_text_x=element_text(size=12),
+                text=element_text(size=12)
+            )
 #            + ggtitle("Number of Interactions Relative to Default Metric")
     ), 1)
 
@@ -396,18 +458,27 @@ def plot_interactions_per_system():
     df_plot = df_plot.dropna()
     df_plot['Metric'] = df_plot['Metric'].cat.remove_unused_categories()
 
+    df_plot['T'] = pd.Categorical(df_plot['T'])
+
     create_plot('interactions_per_system', (
-        ggplot(df_plot, aes('VariableCount', 'CoveredInteractions', color='Metric', shape='Metric'))
-        + geom_point()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
-        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
-        + scale_colour_manual(values = ('blue', 'green', 'red'))
-        + scale_shape_manual(values = ('o', '+', '^'))
-        #+ scale_y_log10()
-        + scale_y_log10(labels=lambda x: [f'10^{int(np.log10(y))}' for y in x])
-        + xlab("Number of Features")
-        + ylab("Interactions")
-#        + ggtitle("Number of Interactions")
+            ggplot(df_plot, aes('VariableCount', 'CoveredInteractions', color='T', shape='Metric'))
+            + geom_point()
+            + theme(axis_text_x=element_text(rotation=30, hjust=1),
+                    legend_position=(0.1, 0.9),
+                    legend_box_margin=5)
+            + theme(
+                axis_title_x=element_text(size=14),
+                axis_title_y=element_text(size=14),
+                strip_text_x=element_text(size=12),
+                text=element_text(size=12)
+            )
+            + labs(color='t')
+            + scale_colour_manual(values=('blue', 'green', 'red'))
+            + scale_shape_manual(values=('o', '+', '^'))
+            + scale_x_log10(labels=lambda x: [f'10^{int(np.log10(y))}' for y in x])
+            + scale_y_log10(labels=lambda x: [f'10^{int(np.log10(y))}' for y in x], breaks=[10**i for i in [1, 2, 3, 6, 9]])
+            + xlab("Number of Features")
+            + ylab("Considered Interactions")
     ), 1)
 
 
@@ -424,9 +495,15 @@ def plot_variable_reduction_per_metric():
     create_plot('feature_reduction_per_metric', (
         ggplot(df_plot, aes('Metric', 'VariableReduction'))
         + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + xlab("Metric")
         + ylab("Feature Ratio")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #       + ggtitle("Number of Considered Features Relative to Default Metric")
     ), 1)
 
@@ -440,29 +517,72 @@ def plot_metric_time_per_metric():
     create_plot('metric_time_per_metric', (
         ggplot(df_plot, aes('Metric', 'MetricTime'))
         + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
         + scale_y_log10()
         + xlab("Metric")
         + ylab("Computation Time (s)")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #        + ggtitle("Metric Computation Time of each Metric")
+    ), 1)
+
+def plot_metric_time_per_metric_t2():
+    df_plot = data[(data['Size'] == data['PartialSampleSize']) & (data["T"] == 2)]
+    df_plot = df_plot.groupby(['SystemID', 'T', 'SystemIteration', 'ShuffleIteration', 'Metric'], observed=True)['MetricTime'].median().reset_index()
+
+    df_plot = df_plot[df_plot['Metric'].isin(['default','CF-DF','AF','ALS','CF-DF-ALS','PCI','CF-DF-AF-ALS','CF-DF-AF-ALS-PCI'])]
+
+    create_plot('metric_time_per_metric_t2', (
+            ggplot(df_plot, aes('Metric', 'MetricTime'))
+            + geom_boxplot()
+            + theme(axis_text_x=element_text(rotation=30, hjust=1))
+            + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+            + scale_y_log10()
+            + xlab("Metric")
+            + ylab("Computation Time (s)")
+            + theme(
+                axis_title_x=element_text(size=14),
+                axis_title_y=element_text(size=14),
+                strip_text_x=element_text(size=12),
+                text=element_text(size=12)
+            )
+        #        + ggtitle("Metric Computation Time of each Metric")
     ), 1)
 
 
 def plot_metric_time_per_system():
     df_plot = data[data['Size'] == data['PartialSampleSize']]
-    df_plot = df_plot.groupby(['SystemName', 'VariableCount', 'T', 'SystemIteration', 'ShuffleIteration'], observed=True)    ['MetricTime'].median().reset_index()
+    df_plot = df_plot[df_plot['Metric'].isin(['default', 'CF-DF-AF-ALS-PCI'])]
+
+    df_plot = df_plot.groupby(['VariableCount', 'T', 'Metric'], observed=True)['MetricTime'].median().reset_index()
 
     create_plot('metric_time_per_system', (
-        ggplot(df_plot, aes('SystemName', 'MetricTime'))
-        + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
-        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
-        + scale_y_log10()
-        + xlab("System")
-        + ylab("Computation Time (s)")
-#        + ggtitle("Metric Computation Time for each System")
+            ggplot(df_plot, aes('VariableCount', 'MetricTime', fill='Metric'))
+            + geom_boxplot(outlier_size=0.2)
+            + theme(axis_text_x=element_text(rotation=30, hjust=1),
+                    legend_position='top')
+            + scale_fill_manual(values=['blue', 'green'],
+                                breaks=['default', 'CF-DF-AF-ALS-PCI'],
+                                labels=['Default', 'CF-DF-AF-ALS-PCI'])
+            + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
+            + scale_x_log10()
+            + scale_y_log10()
+            + xlab("Variable Count")
+            + ylab("Computation Time (s)")
+            + theme(
+                axis_title_x=element_text(size=14),
+                axis_title_y=element_text(size=14),
+                strip_text_x=element_text(size=12),
+                text=element_text(size=12)
+            )
     ), 1)
+
+
 
 
 def plot_coverage_time_per_metric():
@@ -474,11 +594,17 @@ def plot_coverage_time_per_metric():
     create_plot('coverage_time_per_metric', (
         ggplot(df_plot, aes('Metric', 'CoverageTime'))
         + geom_boxplot()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+        + theme(axis_text_x=element_text(rotation=30, hjust=1))
         + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
         + scale_y_log10()
         + xlab("Metric")
         + ylab("Computation Time (s)")
+        + theme(
+            axis_title_x=element_text(size=14),
+            axis_title_y=element_text(size=14),
+            strip_text_x=element_text(size=12),
+            text=element_text(size=12)
+        )
 #        + ggtitle("Coverage Computation Time of each Metric")
     ), 1)
 
@@ -491,7 +617,7 @@ def plot_coverage_time_per_system():
 #    create_plot('coverage_time_per_system', (
 #        ggplot(df_plot, aes('factor(VariableCount)', 'CoverageTime'))
 #        + geom_boxplot()
-#        + theme(axis_text_x=element_text(rotation=45, hjust=1))
+#        + theme(axis_text_x=element_text(rotation=30, hjust=1))
 #        + facet_grid(cols='T', labeller=labeller(cols=(lambda v : 't = ' + v)))
 #        + scale_y_log10()
 #        + scale_x_continuous(breaks=[100,500,1000,3000])
@@ -507,22 +633,29 @@ def plot_coverage_time_per_system():
     create_plot('coverage_time_per_number_of_features', (
             ggplot(df_median, aes('VariableCount', 'CoverageTime'))  # X-axis is VariableCount
             + geom_point(size=3, color='blue')  # Plot a point for the median value
-            + theme(axis_text_x=element_text(rotation=45, hjust=1))  # Rotate x-axis labels for readability
+            + theme(axis_text_x=element_text(rotation=30, hjust=1))  # Rotate x-axis labels for readability
             + facet_grid(cols='T', labeller=labeller(cols=(lambda v: 't = ' + str(v))))  # Facet by 'T'
             + scale_y_log10()  # Use log scale for y-axis
             + xlab("Number of Features")  # Label for x-axis
             + ylab("Computation Time (s)")  # Label for y-axis
+            + theme(
+                axis_title_x=element_text(size=14),
+                axis_title_y=element_text(size=14),
+                strip_text_x=element_text(size=12),
+                text=element_text(size=12)
+            )
         # + ggtitle("Median Coverage Computation Time by Variable Count")
     ), 1)
 
 
 
-def plot_coverage_per_partial_sample_size():
+def plot_coverage_per_partial_sample_size_t2():
     df_plot = data[(data['T'] == 2) & ((data['SystemName'] == "axTLS") | (data['SystemName'] == "am31_sim"))]
 
     df_plot = df_plot.groupby(['SystemName', 'Metric', 'PartialSampleSize'], observed=True).agg({
-    'Coverage': 'median',
-    'RelaltivePartialSize': 'median'}).reset_index()
+        'Coverage': 'median',
+        'RelaltivePartialSize': 'median'
+    }).reset_index()
 
     df_plot = df_plot[df_plot['Metric'].isin(['default', 'CF-DF-AF-ALS-PCI'])]
     df_plot = df_plot.dropna()
@@ -539,17 +672,37 @@ def plot_coverage_per_partial_sample_size():
         df_plot.loc[df_plot['SystemName'] == system_name, 'p'] = p
     df_plot = df_plot[df_plot['p'] < 0.05]
 
-    create_plot('coverage_per_partial_sample_size', (
-        ggplot(df_plot, aes('RelaltivePartialSize', 'Coverage', color='Metric'))
-        + geom_line()
-        + theme(axis_text_x=element_text(rotation=45, hjust=1))
-        + facet_wrap('SystemName')
-        + scale_colour_manual(values = ('blue', 'orange', 'green'))
-        + xlab("Relative Partial Sample Size")
-        + ylab("Coverage")
-        + theme(text=element_text(size=16))
-#        + ggtitle("Coverage per Partial Sample")
-    ), 1)
+    # Custom facet labels
+    custom_labels = {
+        'axTLS': 'axTLS (number of features: 96)',
+        'am31_sim': 'am31_sim (number of features: 1178)'
+    }
+
+    create_plot('coverage_per_partial_sample_size_t2', (
+            ggplot(df_plot, aes('RelaltivePartialSize', 'Coverage', color='Metric'))
+            + geom_line()
+            + theme(axis_text_x=element_text(rotation=30, hjust=1))
+            + facet_wrap('SystemName', ncol=1, labeller=labeller(SystemName=lambda s: custom_labels[s]))  # Custom labeler
+            + scale_colour_manual(values=('blue', 'orange', 'green'))
+            + xlab("Relative Partial Sample Size")
+            + ylab("Pair-wise Coverage")
+            + scale_y_continuous(breaks=[0.2,0.4,0.6,0.8,1.0], labels = ['20%','40%','60%','80%','100%'], limits=[0.2,1.0])
+            + scale_x_continuous(breaks=[0.0,0.2,0.4,0.6,0.8,1.0], labels = ['0%','20%','40%','60%','80%','100%'])
+            + theme(
+        axis_title_x=element_text(size=18),
+        axis_title_y=element_text(size=18),
+        strip_text_x=element_text(size=14),
+        text=element_text(size=14),
+        legend_position=(0.975, 0.025),
+        legend_box_margin=5,
+        legend_margin=5,
+        legend_background=element_rect(fill='white', size=0.5, color='black')
+    )
+    ), 1, 200, 200)
+
+
+
+
 
 
 if __name__ == "__main__":
@@ -562,25 +715,27 @@ if __name__ == "__main__":
     systems = dfs[1]
     metrics = dfs[2]
 
-    print('Errors in refined table: ' + str([
-        len(data[data['Size']<0]),
-        len(data[data['Coverage']>1]),
-        len(data[data['Coverage']<0]),
-        len(data[data['InteractionReduction']>1])
-    ]))
+#    print('Errors in refined table: ' + str([
+#        len(data[data['Size']<0]),
+#        len(data[data['Coverage']>1]),
+#        len(data[data['Coverage']<0]),
+#        len(data[data['InteractionReduction']>1])
+#    ]))
 
     print('Ploting')
-    plot_system_statistics()
-    plot_coverage_per_system()
-    plot_coverage_per_metric()
-    plot_relative_coverage_per_metric()
-    plot_interactions_per_system()
-    plot_interaction_reduction_per_metric()
-    plot_interaction_reduction_per_system()
-    plot_variable_reduction_per_metric()
-    plot_coverage_per_partial_sample_size()
-    plot_metric_time_per_metric()
-    plot_metric_time_per_system()
-    plot_coverage_time_per_metric()
-    plot_coverage_time_per_system()
+#    plot_system_statistics()
+#    plot_coverage_per_system()
+#    plot_coverage_per_metric()
+#    plot_relative_coverage_per_metric()
+#    plot_interactions_per_system()
+#    plot_interaction_reduction_per_metric()
+#    plot_interaction_reduction_per_metric_t2()
+#    plot_interaction_reduction_per_system()
+#    plot_variable_reduction_per_metric()
+    plot_coverage_per_partial_sample_size_t2()
+#    plot_metric_time_per_metric()
+#    plot_metric_time_per_metric_t2()
+#    plot_metric_time_per_system()
+#    plot_coverage_time_per_metric()
+#    plot_coverage_time_per_system()
     print('Finished')
