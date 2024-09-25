@@ -112,6 +112,9 @@ public class PrepareFeatureModelPhase extends Evaluator {
 
             Iterator<BooleanAssignment> iterator = atomic.iterator();
             BooleanAssignment core = iterator.next();
+            addToGroup(atomicLiteralsGroup, core);
+            addToGroup(atomicFeaturesGroup, new BooleanAssignment(core.getPositiveValues()));
+            addToGroup(atomicFeaturesGroup, new BooleanAssignment(core.getNegativeValues()).inverse());
             coreGroup.add(new BooleanAssignment(core.getPositiveValues()));
             coreGroup.add(new BooleanAssignment(core.getNegativeValues()).inverse());
             while (iterator.hasNext()) {
