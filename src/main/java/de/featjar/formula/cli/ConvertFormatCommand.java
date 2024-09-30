@@ -26,7 +26,7 @@ import java.util.Optional;
 /**
  * Converts the format of a given formula.
  *
- * @author Andreas Gerasimow
+ * @author anonymous
  */
 public class ConvertFormatCommand extends AConvertFormatCommand {
 

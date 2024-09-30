@@ -34,8 +34,8 @@ import java.util.stream.Collectors;
 /**
  * Textual format for serializing and parsing an {@link AValueAssignment}.
  *
- * @author Elias Kuiter
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class ValueAssignmentFormat implements IFormat<AValueAssignment> {
 

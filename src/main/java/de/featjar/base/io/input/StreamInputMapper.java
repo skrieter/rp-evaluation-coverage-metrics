@@ -30,7 +30,7 @@ import java.util.Map.Entry;
 /**
  * Maps virtual paths to stream inputs.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class StreamInputMapper extends AInputMapper {
     /**

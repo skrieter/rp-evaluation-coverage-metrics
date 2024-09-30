@@ -28,7 +28,7 @@ import java.util.List;
  * Counts the maximum depth of a tree.
  * Can be passed a class up to which should be counted (e.g., to exclude details in a tree).
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class TreeDepthCounter implements ITreeVisitor<ITree<?>, Integer> {
     private Class<? extends ITree<?>> terminalClass = null;

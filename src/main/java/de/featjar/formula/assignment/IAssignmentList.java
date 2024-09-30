@@ -37,7 +37,7 @@ import java.util.stream.Stream;
  * If {@code T} refers to a {@link ISolution} type, the list usually represents a disjunctive normal form (DNF).
  *
  * @param <T> the type of the assignment
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IAssignmentList<T extends IAssignment<?, ?>> extends Iterable<T> {
     /**

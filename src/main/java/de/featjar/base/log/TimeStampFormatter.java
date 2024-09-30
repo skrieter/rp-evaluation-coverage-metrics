@@ -30,8 +30,8 @@ import java.util.Locale;
 /**
  * Prepends a log message with a time stamp.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class TimeStampFormatter implements IFormatter {
     public static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT)

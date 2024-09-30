@@ -27,7 +27,7 @@ import de.featjar.base.io.input.AInputMapper;
 /**
  * Parses and serializes a text as a string.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class StringTextFormat implements IFormat<String> {
 

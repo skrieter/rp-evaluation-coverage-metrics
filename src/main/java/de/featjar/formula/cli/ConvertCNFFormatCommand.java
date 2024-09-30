@@ -29,7 +29,7 @@ import java.util.Optional;
 /**
  * Converts the format of a given formula into another CNF format.
  *
- * @author Andreas Gerasimow
+ * @author anonymous
  */
 public class ConvertCNFFormatCommand extends AConvertFormatCommand {
 

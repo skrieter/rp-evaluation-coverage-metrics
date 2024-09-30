@@ -32,9 +32,9 @@ import java.util.Optional;
 /**
  * Computes atomic sets for a given formula using SAT4J.
  *
- * @author Elias Kuiter
- * @author Sebastian Krieter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
  */
 public class AtomicSetsCommand extends ASAT4JAnalysisCommand<BooleanAssignmentList, BooleanSolutionList> {
 

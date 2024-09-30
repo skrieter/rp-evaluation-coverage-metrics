@@ -50,7 +50,7 @@ import java.util.stream.Collectors;
 /**
  * Converts model files into cnf and computes sets of features, such as core, dead, and atomic sets.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class PrepareFeatureModelPhase extends Evaluator {
 

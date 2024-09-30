@@ -28,7 +28,7 @@ import java.util.Optional;
  * Expresses a tautology.
  * Always evaluates to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class True extends ATerminalExpression implements IPolarPredicate {
 

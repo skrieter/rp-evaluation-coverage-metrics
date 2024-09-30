@@ -29,7 +29,7 @@ import de.featjar.formula.structure.term.value.Variable;
  * TODO: not supported by SAT solvers, but there is no error handling implemented, so
  *  it may cause undefined behavior. same goes for {@link ForAll}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Exists extends AQuantifier {
     // TODO: rewrite CNFSlicer to work on a QBF

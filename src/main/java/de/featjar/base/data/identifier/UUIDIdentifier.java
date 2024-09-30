@@ -23,7 +23,7 @@ package de.featjar.base.data.identifier;
 /**
  * Identifies an object with a given {@link UUIDIdentifier}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class UUIDIdentifier extends AIdentifier {
 

@@ -23,7 +23,7 @@ package de.featjar.base;
 /**
  * Utilities for handling exceptions.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Exceptions {
     /**

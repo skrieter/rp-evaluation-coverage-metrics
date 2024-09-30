@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 /**
  * Input file header to determine whether a {@link IFormat} can parse a particular content.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class InputHeader implements Supplier<String> {
 

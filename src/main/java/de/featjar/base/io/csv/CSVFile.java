@@ -45,8 +45,8 @@ import java.util.stream.Stream;
  * Implements a fluent API for writing values to a new line, for example with
  * {@code csvFile.add(...).add(...).newLine().flush();}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class CSVFile {
 

@@ -33,8 +33,8 @@ import java.util.Optional;
  * Expresses "A == true" (or A) and "A == false" (or !A) constraints.
  * Evaluates to {@code true} iff its child evaluates to the polarity given by {@link #isPositive}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Literal extends ANonTerminalExpression implements IUnaryExpression, IPolarPredicate {
 

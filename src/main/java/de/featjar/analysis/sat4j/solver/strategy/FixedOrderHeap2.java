@@ -26,7 +26,7 @@ import org.sat4j.specs.ISolver;
  * Modified variable order for {@link ISolver}.<br>
  * Uses the {@link UniformRandomSelectionStrategy}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class FixedOrderHeap2 extends FixedOrderHeap {
 

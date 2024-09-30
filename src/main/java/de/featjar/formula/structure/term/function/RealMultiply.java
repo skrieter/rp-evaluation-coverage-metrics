@@ -27,7 +27,7 @@ import java.util.Optional;
 /**
  * Multiplies the values of two real terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RealMultiply extends AMultiply {
 

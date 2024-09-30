@@ -29,7 +29,7 @@ import java.util.List;
  * Nonetheless, it captures a children type, such that it can be added as a child to a non-leaf node.
  *
  * @param <T> the type of children, the implementing type must be castable to T
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class ALeafNode<T extends ITree<T>> implements ITree<T> {
 

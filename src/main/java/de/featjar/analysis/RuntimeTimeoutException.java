@@ -25,7 +25,7 @@ package de.featjar.analysis;
  * timeout.<br>
  * Doesn't need to be caught explicitly.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RuntimeTimeoutException extends RuntimeException {
 

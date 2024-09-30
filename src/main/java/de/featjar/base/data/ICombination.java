@@ -23,7 +23,7 @@ package de.featjar.base.data;
 /**
  * Combination of some items.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface ICombination<E, T> {
 

@@ -28,7 +28,7 @@ import de.featjar.base.io.input.InputHeader;
  *
  * @param <T> the type of the parsed object
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 @FunctionalInterface
 public interface IFormatSupplier<T> {

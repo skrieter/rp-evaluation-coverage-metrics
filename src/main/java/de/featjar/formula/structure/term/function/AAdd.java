@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Adds the values of two terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class AAdd extends ANonTerminalExpression implements IFunction, IBinaryExpression {
 

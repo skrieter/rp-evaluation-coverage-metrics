@@ -32,8 +32,8 @@ import java.util.stream.Stream;
  * A list of Boolean assignments.
  *
  * @param <T> the type of the literal list
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class ABooleanAssignmentList<T extends ABooleanAssignment>
         implements IAssignmentList<T>, IBooleanRepresentation {

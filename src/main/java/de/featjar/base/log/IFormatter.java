@@ -25,8 +25,8 @@ import de.featjar.base.log.Log.Verbosity;
 /**
  * Formats a log message.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IFormatter {
     /**

@@ -25,7 +25,7 @@ import de.featjar.base.io.input.AInput;
 /**
  * An exception that occurs while parsing an {@link AInput}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ParseException extends Exception {
 

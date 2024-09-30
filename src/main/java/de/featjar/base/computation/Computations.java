@@ -42,7 +42,7 @@ import java.util.function.Supplier;
  * To extract the result of a computation (i.e., return to the synchronous computation mode),
  * use {@link Computations#await(IComputation)})} and other {@code await} helpers.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Computations {
     /**

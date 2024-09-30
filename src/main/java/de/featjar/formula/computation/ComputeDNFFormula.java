@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * Transforms a formula into strict disjunctive normal form.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeDNFFormula extends AComputation<IFormula> {
     protected static final Dependency<IFormula> NNF_FORMULA = Dependency.newDependency(IFormula.class);

@@ -26,7 +26,7 @@ import java.nio.file.Path;
 /**
  * Creates a factory for a given file format and path.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface IFactorySupplier<T> {
 

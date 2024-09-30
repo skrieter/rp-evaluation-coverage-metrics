@@ -37,8 +37,8 @@ import java.util.stream.Collectors;
  * Transforms a formula into strict normal form using the distributive law.
  * Does not modify its input.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class DistributiveTransformer implements Function<IFormula, Result<IFormula>> {
     /**

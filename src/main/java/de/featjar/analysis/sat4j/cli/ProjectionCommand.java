@@ -50,7 +50,7 @@ import java.util.Set;
 /**
  * Removes literals of a given formula using SAT4J.
  *
- * @author Andreas Gerasimow
+ * @author anonymous
  */
 public class ProjectionCommand extends ACommand {
 

@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 /**
  * Serializes computations to GraphViz DOT files.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class GraphVizComputationTreeFormat extends GraphVizTreeFormat<IComputation<?>> {
     protected boolean includeResults = true;

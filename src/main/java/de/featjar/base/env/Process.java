@@ -42,7 +42,7 @@ import java.util.function.Supplier;
 /**
  * Executes an external executable in a process.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Process implements Supplier<Result<List<String>>> {
     protected final Path executablePath;

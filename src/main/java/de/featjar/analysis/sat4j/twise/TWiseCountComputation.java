@@ -38,7 +38,7 @@ import java.util.List;
  * Calculates statistics regarding t-wise feature coverage of a set of
  * solutions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class TWiseCountComputation extends AComputation<Long> {
 

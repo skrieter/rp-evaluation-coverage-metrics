@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * {@link AAssignmentGroups} implementation for {@link ABooleanAssignment}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BooleanAssignmentGroups extends AAssignmentGroups<ABooleanAssignment> {
 

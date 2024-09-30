@@ -27,7 +27,7 @@ import de.featjar.formula.assignment.BooleanAssignmentGroups;
 /**
  * Extension point for {@link AFormats formats} for {@link BooleanAssignmentGroups}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BooleanAssignmentGroupsFormats extends AFormats<BooleanAssignmentGroups> {
     public static BooleanAssignmentGroupsFormats getInstance() {

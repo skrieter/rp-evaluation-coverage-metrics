@@ -38,8 +38,8 @@ import org.w3c.dom.Element;
 /**
  * Parses feature model formulas from FeatureIDE XML files.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class XMLFeatureModelFormulaFormat extends AXMLFeatureModelFormat<IFormula, Literal, Boolean> {
     protected final LinkedHashSet<String> featureLabels = Sets.empty();

@@ -27,7 +27,7 @@ import java.util.function.Supplier;
  * Combination iterator that uses the combinatorial number system to process
  * combinations in parallel.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public final class Combination<E> extends ACombination<E, int[]> {
 

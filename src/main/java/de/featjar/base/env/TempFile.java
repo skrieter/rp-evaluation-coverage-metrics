@@ -27,7 +27,7 @@ import java.nio.file.Path;
 /**
  * A temporary file that can be automatically deleted after use.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class TempFile implements AutoCloseable {
 

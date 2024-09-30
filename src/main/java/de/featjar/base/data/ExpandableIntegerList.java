@@ -27,7 +27,7 @@ import java.util.stream.IntStream;
 /**
  * A dynamic array of integer values.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ExpandableIntegerList implements Serializable {
 

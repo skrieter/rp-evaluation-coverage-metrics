@@ -29,8 +29,8 @@ import java.util.function.BiFunction;
  * The terms "tree" and "node" are interchangeable.
  *
  * @param <T> the type of children, the implementing type must be castable to T
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class ATree<T extends ITree<T>> implements ITree<T> {
     /**

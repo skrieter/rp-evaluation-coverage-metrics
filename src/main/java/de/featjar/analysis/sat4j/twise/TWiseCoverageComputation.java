@@ -46,7 +46,7 @@ import java.util.Random;
  * Calculates statistics regarding t-wise feature coverage of a set of
  * solutions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class TWiseCoverageComputation extends ASAT4JAnalysis<CoverageStatistic> {
     public static final Dependency<Integer> T = Dependency.newDependency(Integer.class);

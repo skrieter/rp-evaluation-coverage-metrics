@@ -30,7 +30,7 @@ import java.util.zip.ZipOutputStream;
  * An entry in a ZIP file.
  * Used to create a {@link ZIPFileOutputMapper}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ZIPEntryOutput extends AOutput {
     protected final Path path;

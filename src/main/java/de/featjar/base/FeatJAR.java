@@ -57,7 +57,7 @@ import java.util.function.Supplier;
  * However, different FeatJAR instances can be created over time in the same
  * thread (e.g., to change the configuration).
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public final class FeatJAR extends IO implements AutoCloseable {
     public static final String ROOT_PACKAGE_NAME = "de.featjar";

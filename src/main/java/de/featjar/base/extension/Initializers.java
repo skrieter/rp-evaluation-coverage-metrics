@@ -23,6 +23,6 @@ package de.featjar.base.extension;
 /**
  * Extension point for registering static (de-)initializers.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Initializers extends AExtensionPoint<IInitializer> {}

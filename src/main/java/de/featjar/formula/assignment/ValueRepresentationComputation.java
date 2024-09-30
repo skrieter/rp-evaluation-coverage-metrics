@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * TODO ...
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueRepresentationComputation<T extends IBooleanRepresentation, U extends IValueRepresentation>
         extends AComputation<U> {

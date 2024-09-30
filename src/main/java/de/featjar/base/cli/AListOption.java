@@ -26,8 +26,8 @@ import java.util.function.Function;
 /**
  * A list option, which is parsed as a list of values.
  *
- * @author Elias Kuiter
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  * @param <T> the type of the option value
  */
 public abstract class AListOption<T> extends Option<List<T>> {

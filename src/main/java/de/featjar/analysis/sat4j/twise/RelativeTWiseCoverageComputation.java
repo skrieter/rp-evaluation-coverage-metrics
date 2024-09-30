@@ -37,7 +37,7 @@ import java.util.List;
  * Calculates statistics regarding t-wise feature coverage of a set of
  * solutions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RelativeTWiseCoverageComputation extends AComputation<CoverageStatistic> {
     public static final Dependency<BooleanSolutionList> REFERENCE_SAMPLE =

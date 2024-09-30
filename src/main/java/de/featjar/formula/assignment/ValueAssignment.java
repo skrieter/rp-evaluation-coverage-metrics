@@ -28,7 +28,7 @@ import java.util.LinkedHashMap;
  * Primary implementation of {@link AValueAssignment}.
  * To be used when neither CNF nor DNF semantics are associated with an assignment.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueAssignment extends AValueAssignment {
     public ValueAssignment() {}

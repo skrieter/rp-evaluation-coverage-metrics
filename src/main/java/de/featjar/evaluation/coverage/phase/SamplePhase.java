@@ -39,7 +39,7 @@ import java.nio.file.Path;
 /**
  * Creates t-wise samples per given model and t.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class SamplePhase extends Evaluator {
 

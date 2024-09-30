@@ -32,7 +32,7 @@ import java.util.function.Function;
  *
  * @param <T> the type of the mapped value
  * @param <U> the type of the mapped result
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ComputeFunction<T, U> extends AComputation<U> {
     protected static final Dependency<?> INPUT = Dependency.newDependency();

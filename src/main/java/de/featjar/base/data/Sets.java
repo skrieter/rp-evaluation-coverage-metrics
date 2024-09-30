@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
  * Utilities for handling linked hash sets.
  * Prefer to use {@link LinkedHashSet} over {@link java.util.HashSet}, as it guarantees determinism.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Sets {
     public static <T> LinkedHashSet<T> empty() {

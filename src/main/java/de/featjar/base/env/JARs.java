@@ -29,7 +29,7 @@ import java.nio.file.Path;
 /**
  * Utilities for handling Java archives.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class JARs {
     /**

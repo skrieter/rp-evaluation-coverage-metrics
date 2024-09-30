@@ -34,7 +34,7 @@ import java.util.Random;
 /**
  * Finds core and dead features.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeCoreSAT4J extends ASAT4JAnalysis.Solution<BooleanAssignment> {
     protected static final Dependency<BooleanAssignment> VARIABLES_OF_INTEREST =

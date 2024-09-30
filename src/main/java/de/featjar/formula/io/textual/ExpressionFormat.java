@@ -29,7 +29,7 @@ import de.featjar.formula.structure.IExpression;
 /**
  * Parses and serializes propositional and first-order expressions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 @Deprecated
 public class ExpressionFormat implements IFormat<IExpression> {

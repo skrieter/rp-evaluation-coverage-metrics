@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * Transforms a {@link IFormula} into a formula and a corresponding {@link VariableMap}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeFormulaVariableMap extends AComputation<Pair<IFormula, VariableMap>> {
 

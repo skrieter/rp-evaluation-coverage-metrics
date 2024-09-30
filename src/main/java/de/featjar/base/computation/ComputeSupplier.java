@@ -31,9 +31,9 @@ import java.util.function.Supplier;
  * The caller must guarantee that this identifier is unique.
  *
  * @param <T> the type of the mapped result
- * @author Elias Kuiter
- * @author Sebastian Krieter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
  */
 public class ComputeSupplier<T> extends AComputation<T> {
     protected final Class<?> klass;

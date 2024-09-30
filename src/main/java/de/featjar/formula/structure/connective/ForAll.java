@@ -27,7 +27,7 @@ import de.featjar.formula.structure.term.value.Variable;
  * Expresses "for all X such that A" constraints (i.e., universal quantification).
  * Evaluates to {@code true} iff, for all values of the bound variable, the formula evaluates to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ForAll extends AQuantifier {
 

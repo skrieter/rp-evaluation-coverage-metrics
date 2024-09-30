@@ -28,7 +28,7 @@ import java.util.Collection;
  * Primary implementation of {@link AValueAssignmentList}.
  * To be used when neither CNF nor DNF semantics are associated with an assignment list.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueAssignmentList extends AValueAssignmentList<ValueAssignment> {
     public ValueAssignmentList() {}

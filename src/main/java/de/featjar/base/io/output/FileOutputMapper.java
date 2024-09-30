@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Maps physical paths to physical outputs.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class FileOutputMapper extends AOutputMapper {
     protected final Path rootPath;

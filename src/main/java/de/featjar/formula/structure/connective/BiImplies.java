@@ -30,7 +30,7 @@ import java.util.Optional;
  * Expresses "A iff B" constraints (i.e., bi-implication).
  * Evaluates to {@code true} iff both children evaluate to the same value.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BiImplies extends ANonTerminalExpression implements IConnective, IBinaryExpression {
 

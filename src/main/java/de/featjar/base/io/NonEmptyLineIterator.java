@@ -27,7 +27,7 @@ import java.util.function.Supplier;
 /**
  * Reads a text-based stream line-by-line, skipping empty lines.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class NonEmptyLineIterator implements Supplier<String> {
 

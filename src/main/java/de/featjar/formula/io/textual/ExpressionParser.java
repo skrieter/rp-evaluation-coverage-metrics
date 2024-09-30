@@ -45,13 +45,13 @@ import java.util.regex.Pattern;
  * and {@link BiImplies}.
  * TODO: write new parser for all expression types
  *
- * @author Dariusz Krolikowski
- * @author David Broneske
- * @author Fabian Benduhn
- * @author Thomas Thüm
- * @author Florian Proksch
- * @author Stefan Krueger
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
  * @deprecated does not work reliably at the moment
  */
 @Deprecated

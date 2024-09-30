@@ -30,8 +30,8 @@ import java.util.stream.Collectors;
 /**
  * An assignment of arbitrary values to variable names.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Assignment implements IClause<String, Object>, ISolution<String, Object> {
 

@@ -29,7 +29,7 @@ import java.util.Objects;
  * Combines multiple groups of lists of {@link IAssignment assignments} with a corresponding {@link VariableMap variable map}.
  * The main purposes of this class is to provide an easy to write/read object for a corresponding {@link IFormat format}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class AAssignmentGroups<T extends IAssignment<?, ?>> {
 

@@ -27,7 +27,7 @@ import java.util.function.Function;
 /**
  * Primary implementation of {@link IAttribute}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Attribute<T> implements IAttribute<T> {
     public static final String DEFAULT_NAMESPACE = Attribute.class.getPackageName();

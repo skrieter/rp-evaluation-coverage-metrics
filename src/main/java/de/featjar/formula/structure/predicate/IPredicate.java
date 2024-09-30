@@ -26,7 +26,7 @@ import de.featjar.formula.structure.IFormula;
  * A predicate.
  * By convention, all children are terms.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IPredicate extends IFormula {}

@@ -31,7 +31,7 @@ import org.sat4j.minisat.core.IPhaseSelectionStrategy;
  * Uses a sample of configurations to achieve a phase selection that corresponds
  * to a uniform distribution of configurations in the configuration space.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class UniformRandomSelectionStrategy implements IPhaseSelectionStrategy {
 

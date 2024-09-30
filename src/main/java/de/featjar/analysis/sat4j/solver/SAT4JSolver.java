@@ -36,8 +36,8 @@ import org.sat4j.specs.TimeoutException;
 /**
  * Base class for solvers using Sat4J.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class SAT4JSolver implements de.featjar.analysis.ISolver {
     protected final ISolver internalSolver = newInternalSolver();

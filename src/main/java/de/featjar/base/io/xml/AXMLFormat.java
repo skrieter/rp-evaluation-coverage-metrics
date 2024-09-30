@@ -56,8 +56,8 @@ import org.xml.sax.InputSource;
  * Helpers for parsing and writing an object from and into an XML file.
  *
  * @param <T> the type of read/written data
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class AXMLFormat<T> implements IFormat<T> {
     protected static final Pattern completeTagPattern = Pattern.compile("<(\\w+)[^/]*>.*</\\1.*>");

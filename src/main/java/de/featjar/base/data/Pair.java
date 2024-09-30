@@ -30,7 +30,7 @@ import java.util.Objects;
  *
  * @param <A> the type of the first element
  * @param <B> the type of the second element
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Pair<A, B> {
 

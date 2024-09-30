@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Reads / Writes a list of configuration.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BooleanAssignmentGroupsDimacsFormat implements IFormat<BooleanAssignmentGroups> {
 

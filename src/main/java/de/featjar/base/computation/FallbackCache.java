@@ -27,8 +27,8 @@ import java.util.List;
 /**
  * Caches nothing.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class FallbackCache extends Cache {
 

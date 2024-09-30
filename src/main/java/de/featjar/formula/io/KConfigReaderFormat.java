@@ -40,8 +40,8 @@ import java.util.stream.Collectors;
  * Parses feature-model formula files created by KConfigReader.
  * TODO: this is currently mostly a hack and should be parsed properly as first-order formulas
  *
- * @author Elias Kuiter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
  */
 public class KConfigReaderFormat implements IFormat<IExpression> {
 

@@ -28,7 +28,7 @@ import java.util.Objects;
  * Can be used, for example, to represent a tree of integers or strings.
  *
  * @param <T> the type of label
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class LabeledTree<T> extends ATree<LabeledTree<T>> {
     protected T label;

@@ -24,7 +24,7 @@ package de.featjar.formula.assignment.metrics;
  * Computes the Cosine distance between two literal arrays. Negative literals
  * are treated as negative one, positive literals as one.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class CosineNegativeDistance implements IDistanceFunction {
 

@@ -28,8 +28,8 @@ import java.util.Optional;
 /**
  * A command run within a {@link Commands}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface ICommand extends IExtension {
 

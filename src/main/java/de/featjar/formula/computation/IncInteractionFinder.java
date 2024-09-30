@@ -39,7 +39,7 @@ import java.util.stream.Stream;
 /**
  * Detect interactions from given set of configurations.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 // TODO convert to computation
 public class IncInteractionFinder {

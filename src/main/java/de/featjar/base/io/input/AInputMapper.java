@@ -33,7 +33,7 @@ import java.util.function.Supplier;
  * Can represent a single input (e.g., one physical file) or a file hierarchy
  * (e.g., physical files referring to each other).
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AInputMapper extends AIOMapper<AInput> {
     protected AInputMapper(Path mainPath) {

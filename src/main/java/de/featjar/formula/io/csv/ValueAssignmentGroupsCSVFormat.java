@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * Reads / Writes a list of configuration.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ValueAssignmentGroupsCSVFormat implements IFormat<ValueAssignmentGroups> {
     private static final String ASSIGNMENT_COLUMN_NAME = "ID";

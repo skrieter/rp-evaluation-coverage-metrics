@@ -34,7 +34,7 @@ import java.util.Optional;
  * Evaluates to {@code true} iff the number of its children that evaluate to {@code true} is larger than
  * or equal to a lower bound and smaller than or equal to an upper bound.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class ACardinal extends ANonTerminalExpression implements IConnective {
     protected Range range;

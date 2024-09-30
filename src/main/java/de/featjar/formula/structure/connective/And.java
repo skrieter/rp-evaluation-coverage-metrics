@@ -29,7 +29,7 @@ import java.util.Optional;
  * Expresses "A and B" constraints (i.e., conjunction).
  * Evaluates to {@code true} iff all of its children evaluate to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class And extends ANonTerminalExpression implements IConnective {
     protected And() {}

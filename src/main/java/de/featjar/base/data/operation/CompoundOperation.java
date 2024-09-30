@@ -27,7 +27,7 @@ import java.util.ListIterator;
 /**
  * An {@link IOperation operation} that consists of multiple other operations.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class CompoundOperation implements IOperation {
 

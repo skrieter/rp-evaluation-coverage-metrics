@@ -38,7 +38,7 @@ import java.util.stream.Stream;
  * Formats can freely decide whether to process any other IO objects.
  *
  * @param <T> the type of mapped object
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AIOMapper<T extends IIOObject> implements AutoCloseable, Supplier<T> {
 

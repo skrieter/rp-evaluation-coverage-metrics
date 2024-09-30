@@ -33,7 +33,7 @@ import java.util.Optional;
  * Expresses quantified Boolean formulas.
  * Evaluates to {@code true} iff there is a value of the bound variable such that the formula evaluates to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class AQuantifier extends ANonTerminalExpression implements IConnective, IUnaryExpression {
     protected Variable boundVariable;

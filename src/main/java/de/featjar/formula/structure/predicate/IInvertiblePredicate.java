@@ -24,7 +24,7 @@ package de.featjar.formula.structure.predicate;
  * A predicate that can be inverted.
  * That is {@code this.invert().evaluate(x) == new Not(this).evaluate(x)}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IInvertiblePredicate extends IPredicate {
     IPredicate invert();

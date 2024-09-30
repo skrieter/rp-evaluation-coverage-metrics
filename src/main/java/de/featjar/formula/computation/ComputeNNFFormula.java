@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * Transforms a formula into strict negation normal form.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ComputeNNFFormula extends AComputation<IFormula> {
     protected static final Dependency<IFormula> FORMULA = Dependency.newDependency(IFormula.class);

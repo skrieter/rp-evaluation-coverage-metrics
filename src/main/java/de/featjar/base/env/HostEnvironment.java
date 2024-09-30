@@ -25,7 +25,7 @@ import java.util.Locale;
 /**
  * Utilities for host-specific operations and information.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class HostEnvironment {
     /**

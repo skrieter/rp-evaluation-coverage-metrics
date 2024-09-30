@@ -52,7 +52,7 @@ import java.util.stream.IntStream;
 /**
  * Computes coverage of all samples, using different metrics.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class PartialCoveragePhase extends Evaluator {
 

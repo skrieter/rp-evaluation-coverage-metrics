@@ -30,8 +30,8 @@ import java.util.Optional;
  * A constant.
  * Is identified by its value.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Constant extends ATerminalExpression implements IValue {
     protected Object value;

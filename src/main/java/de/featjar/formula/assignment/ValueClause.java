@@ -29,7 +29,7 @@ import java.util.LinkedHashMap;
  * A value clause; that is, a disjunction of equalities.
  * Often used as input to an SMT {@link ISolver}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueClause extends AValueAssignment implements IClause<Integer, Object> {
     public ValueClause() {}

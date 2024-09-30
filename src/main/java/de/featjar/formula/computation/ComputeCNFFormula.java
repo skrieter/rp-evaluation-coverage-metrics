@@ -42,8 +42,8 @@ import java.util.function.Consumer;
 /**
  * Transforms a formula into strict conjunctive normal form.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class ComputeCNFFormula extends AComputation<IFormula> {
     public static final Dependency<IFormula> NNF_FORMULA = Dependency.newDependency(IFormula.class);

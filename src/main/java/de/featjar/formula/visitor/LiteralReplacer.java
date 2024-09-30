@@ -37,7 +37,7 @@ import java.util.Map;
 /**
  * Replaces literals with other literals.
  *
- * @author Andreas Gerasimow
+ * @author anonymous
  */
 public class LiteralReplacer implements ITreeVisitor<IFormula, Void> {
     Map<IPolarPredicate, IExpression> literalMap;

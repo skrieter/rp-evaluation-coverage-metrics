@@ -42,7 +42,7 @@ import java.util.List;
 /**
  * Reads / Writes a list of assignments.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BooleanAssignmentGroupsBinaryFormat extends ABinaryFormat<BooleanAssignmentGroups> {
 

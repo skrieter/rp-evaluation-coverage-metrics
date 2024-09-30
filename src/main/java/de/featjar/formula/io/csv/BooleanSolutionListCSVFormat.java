@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * Writes a list of configuration.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BooleanSolutionListCSVFormat implements IFormat<BooleanAssignmentGroups> {
 

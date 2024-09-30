@@ -25,7 +25,7 @@ import java.util.Iterator;
 /**
  * Iterates over a given list of options with different ranges.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ProgressTracker implements Iterator<int[]> {
 

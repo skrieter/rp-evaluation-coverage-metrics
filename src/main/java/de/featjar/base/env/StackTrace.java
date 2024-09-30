@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 /**
  * A stack trace of a thread.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class StackTrace {
     protected List<StackTraceElement> stackTraceElements;

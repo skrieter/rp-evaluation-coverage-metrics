@@ -27,7 +27,7 @@ import java.util.Optional;
 /**
  * Multiplies the values of two integer terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class IntegerMultiply extends AMultiply {
 

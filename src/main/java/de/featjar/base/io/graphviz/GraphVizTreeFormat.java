@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 /**
  * Serializes trees to GraphViz DOT files.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class GraphVizTreeFormat<T extends ITree<T>> implements IFormat<T> {
     protected boolean includeRoot = true;

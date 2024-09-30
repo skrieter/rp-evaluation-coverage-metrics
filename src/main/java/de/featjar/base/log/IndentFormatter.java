@@ -28,8 +28,8 @@ import java.util.stream.Collectors;
 /**
  * Prepends a log message with an appropriate indent.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class IndentFormatter implements IFormatter {
     private int level = 0;

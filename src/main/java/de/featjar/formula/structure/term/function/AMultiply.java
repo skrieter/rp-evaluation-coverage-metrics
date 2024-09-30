@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Multiplies the values of two terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class AMultiply extends ANonTerminalExpression implements IFunction, IBinaryExpression {
     protected AMultiply() {}

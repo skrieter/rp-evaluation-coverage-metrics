@@ -31,7 +31,7 @@ import java.util.function.Function;
 /**
  * Iterates over a list of {@link ListOption list options}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class OptionCombiner {
 

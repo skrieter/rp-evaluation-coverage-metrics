@@ -28,7 +28,7 @@ import java.util.List;
  * Prunes a tree to a given maximum depth.
  * That is, children below this depth will be removed from the tree.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class TreePruner implements ITreeVisitor<ITree<?>, Void> {
 

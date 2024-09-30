@@ -45,8 +45,8 @@ import java.util.LinkedHashSet;
  * A formula is either a {@link IConnective}
  * or a {@link IPredicate}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IFormula extends IExpression {
 

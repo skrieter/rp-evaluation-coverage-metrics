@@ -28,7 +28,7 @@ import org.sat4j.specs.ISolver;
  * Modified variable order for {@link ISolver}.<br>
  * Initializes the used heap in a certain order.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class FixedOrderHeap extends VarOrderHeap {
 

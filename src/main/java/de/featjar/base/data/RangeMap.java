@@ -40,8 +40,8 @@ import java.util.stream.Stream;
  * range is not handled gracefully (with optionals everywhere). maybe this can
  * be solved in a better way.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class RangeMap<T> implements Cloneable {
     protected final ArrayList<T> indexToObject = new ArrayList<>();

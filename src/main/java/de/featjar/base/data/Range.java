@@ -28,7 +28,7 @@ import java.util.stream.IntStream;
  * A range of positive integers limited by a lower and upper bound.
  * Both bounds may be open, in which case they are not checked.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Range implements Function<Integer, Boolean>, Cloneable {
     public static final int OPEN = -1;

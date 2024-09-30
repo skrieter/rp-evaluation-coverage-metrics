@@ -27,7 +27,7 @@ import java.util.Optional;
 /**
  * Divides the values of two integer terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class IntegerDivide extends ADivide {
 

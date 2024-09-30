@@ -31,7 +31,7 @@ import java.util.Optional;
  * A placeholder for a formula that wraps a problem.
  * May be used for example when an expression cannot be parsed.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ProblemFormula extends ATerminalExpression implements IPredicate {
     private final Problem problem;

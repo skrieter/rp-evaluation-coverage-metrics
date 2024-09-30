@@ -44,8 +44,8 @@ import java.util.function.Supplier;
  * pass suppliers that are called if some log target is configured. this saves
  * time for creating log strings
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class ConfigurableLog implements Log, IInitializer {
 

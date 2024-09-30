@@ -25,7 +25,7 @@ import de.featjar.formula.assignment.BooleanSolutionList;
 /**
  * Computes the size of a sample.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class SizeMetric implements ISampleMetric {
 

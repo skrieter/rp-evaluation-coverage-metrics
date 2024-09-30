@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "choose K" constraints.
  * Evaluates to {@code true} iff the number of children that evaluate to {@code true} is equal to a given number.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Choose extends ACardinal {
     private Choose(Choose choose) {

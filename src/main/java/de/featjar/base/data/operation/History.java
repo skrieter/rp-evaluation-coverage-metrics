@@ -25,7 +25,7 @@ import java.util.ArrayDeque;
 /**
  * A history of {@link IOperation operations}. Stores a limited number of executed and undone operations in order of their application. Allows to undo and redo operations.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class History {
 

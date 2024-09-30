@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "A = B" constraints.
  * Evaluates to {@code true} iff both children evaluate to the same value.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Equals extends ANonTerminalExpression implements IBinaryPredicate, IInvertiblePredicate {
 

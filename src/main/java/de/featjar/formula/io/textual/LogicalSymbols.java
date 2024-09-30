@@ -31,8 +31,8 @@ import de.featjar.formula.structure.connective.Or;
  * the user due to brevity and beauty. Since they consist of unwieldy Unicode
  * characters, do not use them for editing or serialization.
  *
- * @author Timo Günther
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class LogicalSymbols extends Symbols {
 

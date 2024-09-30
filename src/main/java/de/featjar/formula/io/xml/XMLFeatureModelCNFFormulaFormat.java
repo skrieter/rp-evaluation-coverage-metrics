@@ -44,8 +44,8 @@ import org.w3c.dom.Element;
  * Parses feature model CNF formulas from FeatureIDE XML files. Returns a
  * formula that is already partially in CNF, except for cross-tree constraints. TODO: actually, this actively transforms...?
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class XMLFeatureModelCNFFormulaFormat extends XMLFeatureModelFormulaFormat {
     @Override

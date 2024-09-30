@@ -29,7 +29,7 @@ import java.util.LinkedHashMap;
  * A (partial) value solution; that is, a conjunction of equalities.
  * Often holds output of an SMT {@link ISolver}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueSolution extends AValueAssignment implements ISolution<Integer, Object> {
     public ValueSolution() {}

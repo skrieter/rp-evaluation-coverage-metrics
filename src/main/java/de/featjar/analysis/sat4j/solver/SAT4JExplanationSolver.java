@@ -48,8 +48,8 @@ import org.sat4j.tools.xplain.Xplain;
  * satisfiability requests. If for solving the usage of the {@link SAT4JSolutionSolver}
  * is recommended.
  *
- * @author Joshua Sprey
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class SAT4JExplanationSolver extends SAT4JSolver {
     public SAT4JExplanationSolver(BooleanClauseList clauseList) {

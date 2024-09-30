@@ -30,7 +30,7 @@ import java.nio.charset.StandardCharsets;
  * Helpers for parsing and writing an object from and into a binary file.
  *
  * @param <T> the type of the written object
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class ABinaryFormat<T> implements IFormat<T> {
 

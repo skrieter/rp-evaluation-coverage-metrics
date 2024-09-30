@@ -36,7 +36,7 @@ import java.nio.file.Path;
 /**
  * Converts the format of a given formula.
  *
- * @author Andreas Gerasimow
+ * @author anonymous
  */
 public abstract class AConvertFormatCommand extends ACommand {
 

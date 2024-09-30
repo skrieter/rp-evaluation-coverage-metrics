@@ -37,7 +37,7 @@ import java.util.Random;
 /**
  * Finds atomic sets.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeAtomicSetsSAT4J extends ASAT4JAnalysis.Solution<BooleanAssignmentList> {
 

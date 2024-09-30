@@ -27,7 +27,7 @@ import java.util.Random;
  * Uses a sample of configurations to achieve a phase selection that corresponds
  * to a uniform distribution of configurations in the configuration space.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class ALiteralDistribution implements Serializable {
 

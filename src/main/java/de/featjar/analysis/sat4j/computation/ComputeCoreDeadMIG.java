@@ -39,7 +39,7 @@ import java.util.Random;
 /**
  * Finds core and dead features using a {@link ModalImplicationGraph model implication graph}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeCoreDeadMIG extends ASAT4JAnalysis.Solution<BooleanAssignment> {
 

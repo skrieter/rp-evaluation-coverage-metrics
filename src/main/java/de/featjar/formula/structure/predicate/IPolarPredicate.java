@@ -23,7 +23,7 @@ package de.featjar.formula.structure.predicate;
 /**
  * An invertible predicate with a polarity (i.e., positive or negative).
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IPolarPredicate extends IInvertiblePredicate {
     boolean isPositive();

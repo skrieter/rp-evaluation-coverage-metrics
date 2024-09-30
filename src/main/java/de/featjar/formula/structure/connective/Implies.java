@@ -31,7 +31,7 @@ import java.util.Optional;
  * Evaluates to {@code true} iff the left child evaluates to {@code false} or
  * the right child evaluates to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Implies extends ANonTerminalExpression implements IConnective, IBinaryExpression {
 

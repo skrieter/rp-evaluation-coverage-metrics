@@ -53,7 +53,7 @@ import org.sat4j.minisat.orders.VarOrderHeap;
 /**
  * ...
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class SAT4JSolutionSolver extends SAT4JSolver {
     protected final int[] order;

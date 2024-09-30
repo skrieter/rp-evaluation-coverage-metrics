@@ -30,8 +30,8 @@ import de.featjar.formula.structure.connective.Or;
  * Symbols for a short textual representation. Best used for serialization since
  * they fall in the ASCII range but are still relatively short.
  *
- * @author Timo Günther
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class ShortSymbols extends Symbols {
 

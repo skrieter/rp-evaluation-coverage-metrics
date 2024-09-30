@@ -38,8 +38,8 @@ import java.util.List;
  * in the original {@link IFormula}.
  * TODO: more error checking for consistency of clauses with variables
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class BooleanClauseList extends ABooleanAssignmentList<BooleanClause> {
 

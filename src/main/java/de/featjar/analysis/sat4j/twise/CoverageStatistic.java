@@ -23,7 +23,7 @@ package de.featjar.analysis.sat4j.twise;
 /**
  * Holds statistics regarding coverage of a configuration sample.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class CoverageStatistic {
     long numberOfInvalidConditions;

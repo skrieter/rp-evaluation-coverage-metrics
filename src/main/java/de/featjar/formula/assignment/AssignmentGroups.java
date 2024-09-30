@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * {@link AAssignmentGroups} implementation for {@link Assignment}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class AssignmentGroups extends AAssignmentGroups<Assignment> {
 

@@ -33,8 +33,8 @@ import java.util.Optional;
 /**
  * Given a variable assignment, evaluates a formula.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Evaluator implements ITreeVisitor<IExpression, Optional<Object>> {
     private final LinkedList<Object> values = new LinkedList<>();

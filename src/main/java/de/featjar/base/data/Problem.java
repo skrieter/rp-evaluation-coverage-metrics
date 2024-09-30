@@ -28,8 +28,8 @@ import java.util.Optional;
 /**
  * A problem that wraps an {@link Exception}. Can be stored in a {@link Result}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Problem {
 

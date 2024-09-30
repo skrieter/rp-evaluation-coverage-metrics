@@ -29,7 +29,7 @@ import java.util.Objects;
 /**
  * Serializes a {@link BooleanClauseList} to a String in DIMACS format.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class CnfDimacsFormat implements IFormat<BooleanClauseList> {
 

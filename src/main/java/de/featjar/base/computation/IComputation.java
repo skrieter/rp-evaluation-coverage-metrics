@@ -58,8 +58,8 @@ import java.util.stream.Stream;
  * To compose anonymous computations, consider using {@link ComputeFunction} instead.
  *
  * @param <T> the type of the computation result
- * @author Elias Kuiter
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IComputation<T> extends Supplier<Result<T>>, ITree<IComputation<?>> {
     /**

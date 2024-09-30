@@ -23,7 +23,7 @@ package de.featjar.base.data.operation;
 /**
  * An interface for a generic operation that supports executing and undoing some action.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface IOperation {
 

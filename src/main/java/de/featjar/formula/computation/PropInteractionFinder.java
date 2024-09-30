@@ -38,7 +38,7 @@ import java.util.stream.IntStream;
  * Calculates statistics regarding t-wise feature coverage of a set of
  * solutions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 // TODO convert to computation
 public class PropInteractionFinder {

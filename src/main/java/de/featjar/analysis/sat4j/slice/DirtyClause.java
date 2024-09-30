@@ -26,7 +26,7 @@ import java.util.HashSet;
 /**
  * Used by {@link CNFSlicer}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class DirtyClause extends BooleanClause {
 

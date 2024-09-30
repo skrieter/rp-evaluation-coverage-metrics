@@ -34,8 +34,8 @@ import java.util.List;
 /**
  * Transforms a formula, which is assumed to be in strict conjunctive normal form, into an indexed CNF representation.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class ComputeBooleanRepresentation extends AComputation<BooleanAssignmentGroups> {
 

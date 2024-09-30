@@ -27,7 +27,7 @@ import java.util.Optional;
 /**
  * Divides the values of two real terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RealDivide extends ADivide {
 

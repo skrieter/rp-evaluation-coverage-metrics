@@ -23,7 +23,7 @@ package de.featjar.formula.io.dimacs;
 /**
  * Constants for the DIMACS format.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class DimacsConstants {
     /** Token leading a (single-line) comment. */

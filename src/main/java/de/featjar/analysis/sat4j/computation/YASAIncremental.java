@@ -58,7 +58,7 @@ import java.util.stream.IntStream;
  * YASA sampling algorithm. Generates configurations for a given propositional
  * formula such that t-wise feature coverage is achieved.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class YASAIncremental extends ASAT4JAnalysis<BooleanSolutionList> {
 

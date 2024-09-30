@@ -31,8 +31,8 @@ import java.util.function.BinaryOperator;
  * Functions (i.e., n-ary terms for n > 1) can be applied to terms
  * (i.e., another {@link IFunction} or a {@link IValue}).
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IFunction extends ITerm {
     /**

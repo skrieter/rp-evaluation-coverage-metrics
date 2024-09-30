@@ -29,7 +29,7 @@ import java.util.Map.Entry;
 /**
  * Maps virtual paths to string inputs.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class StringInputMapper extends AInputMapper {
     /**

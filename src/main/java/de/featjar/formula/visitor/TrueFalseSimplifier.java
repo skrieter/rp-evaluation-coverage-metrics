@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * Replaces trivial tautologies with {@link True} and trivial contradictions with {@link False}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class TrueFalseSimplifier implements ITreeVisitor<IFormula, Void> {
     @Override

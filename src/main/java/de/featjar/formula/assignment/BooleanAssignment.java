@@ -28,7 +28,7 @@ import java.util.Collection;
  * Primary implementation of {@link ABooleanAssignment}. To be used when neither
  * CNF nor DNF semantics are associated with an assignment.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class BooleanAssignment extends ABooleanAssignment {
 

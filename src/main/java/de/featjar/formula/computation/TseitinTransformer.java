@@ -41,8 +41,8 @@ import java.util.stream.Collectors;
  * Auxiliary variables are incrementally numbered and may clash if composed with other formulas.
  * todo: encode the original formula in the variable name (e.g., lossless base64), this would also make unification unnecessary
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class TseitinTransformer
         implements ITreeVisitor<IExpression, IExpression>, Function<IFormula, List<TseitinTransformer.Substitution>> {

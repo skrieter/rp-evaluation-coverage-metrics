@@ -34,8 +34,8 @@ import org.sat4j.specs.IConstr;
  * clauses at the end (i.e., implementing an assumption stack) and does not
  * allow for meaningful cloning due to being tied to a solver instance.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class SAT4JClauseList extends BooleanClauseList {
     protected final SAT4JSolver solver;

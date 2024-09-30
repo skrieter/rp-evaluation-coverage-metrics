@@ -25,7 +25,7 @@ import de.featjar.base.data.IFactory;
 /**
  * Parses a string into an {@link IIdentifier}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IIdentifierFactory extends IFactory<IIdentifier> {
     IIdentifier parse(String identifierString);

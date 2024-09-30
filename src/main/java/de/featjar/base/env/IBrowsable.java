@@ -33,7 +33,7 @@ import java.util.Scanner;
  * Can be passed an argument to influence what is displayed.
  *
  * @param <T> the type of the argument
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IBrowsable<T> {
     /**

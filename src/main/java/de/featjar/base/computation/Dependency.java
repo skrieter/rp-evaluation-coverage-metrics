@@ -31,7 +31,7 @@ import java.util.Map;
  * {@link IComputation#compute(List, Progress)}.
  *
  * @param <U> the type of the dependency's computation result
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Dependency<U> {
 

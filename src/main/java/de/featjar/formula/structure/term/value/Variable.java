@@ -28,8 +28,8 @@ import java.util.Optional;
  * A variable.
  * Is identified by its name.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Variable extends ATerminalExpression implements IValue {
     protected String name;

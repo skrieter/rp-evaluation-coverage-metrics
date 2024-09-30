@@ -41,8 +41,8 @@ import java.util.stream.Collectors;
 /**
  * Caches computation results by storing a map of computations to their future results.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Cache implements IInitializer, IBrowsable<GraphVizTreeFormat<IComputation<?>>> {
     /**

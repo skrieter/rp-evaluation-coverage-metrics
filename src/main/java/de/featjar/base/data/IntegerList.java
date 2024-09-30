@@ -31,8 +31,8 @@ import java.util.stream.IntStream;
  * of these integers (e.g., as an index into a {@link RangeMap}). Negative and
  * zero integers are allowed.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class IntegerList implements Serializable {
 

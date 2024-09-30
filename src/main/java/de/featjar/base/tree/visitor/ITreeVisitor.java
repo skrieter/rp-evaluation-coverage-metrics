@@ -34,7 +34,7 @@ import java.util.function.Function;
  *
  * @param <T> the type of tree
  * @param <U> the type of result
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface ITreeVisitor<T extends ITree<?>, U> {
     /**

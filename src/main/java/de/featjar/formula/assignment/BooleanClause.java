@@ -32,8 +32,8 @@ import java.util.Collection;
  * before positive indices. The same index may occur multiple times, but no
  * element may be 0.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class BooleanClause extends ABooleanAssignment implements IClause<Integer, Boolean> {
 

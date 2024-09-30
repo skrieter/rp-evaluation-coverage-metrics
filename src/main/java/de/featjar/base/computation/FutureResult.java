@@ -46,7 +46,7 @@ import net.tascalate.concurrent.PromiseOrigin;
  * Once the result is available, it is cached indefinitely and can be retrieved with {@link #get()}.
  *
  * @param <T> the type of the result
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class FutureResult<T> implements Supplier<Result<T>> {
     protected final DependentPromise<Result<T>> promise;

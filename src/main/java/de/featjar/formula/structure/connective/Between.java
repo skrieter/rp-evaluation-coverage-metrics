@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "between K and L" constraints.
  * Evaluates to {@code true} iff the number of children that evaluate to {@code true} is in a given range.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Between extends ACardinal {
     private Between(Between between) {

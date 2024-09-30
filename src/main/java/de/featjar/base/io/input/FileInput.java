@@ -30,7 +30,7 @@ import java.nio.file.StandardOpenOption;
 /**
  * A physical file input.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class FileInput extends AInput {
     /**

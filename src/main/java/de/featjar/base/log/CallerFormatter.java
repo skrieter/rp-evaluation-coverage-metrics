@@ -29,7 +29,7 @@ import de.featjar.base.log.Log.Verbosity;
  * To this end, looks for the most recent element on the stack that does not belong
  * to {@link Thread} or to the {@link de.featjar.base.log} package and prints it.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class CallerFormatter implements IFormatter {
 

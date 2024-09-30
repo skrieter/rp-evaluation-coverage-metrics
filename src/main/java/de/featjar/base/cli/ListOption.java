@@ -27,8 +27,8 @@ import java.util.stream.Collectors;
 /**
  * A list option, which is parsed as a list of values.
  *
- * @author Elias Kuiter
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  * @param <T> the type of the option value
  */
 public class ListOption<T> extends AListOption<T> {

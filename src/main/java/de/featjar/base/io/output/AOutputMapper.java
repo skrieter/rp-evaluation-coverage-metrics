@@ -35,7 +35,7 @@ import java.util.*;
  * Can represent a single output (e.g., one physical file) or a file hierarchy
  * (e.g., physical files referring to each other).
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AOutputMapper extends AIOMapper<AOutput> {
     protected AOutputMapper(Path mainPath) {

@@ -28,7 +28,7 @@ import java.util.List;
  * Computes whether the supplied input is present.
  *
  * @param <T> the type of the input
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ComputePresence<T> extends AComputation<Boolean> {
     protected static final Dependency<?> INPUT = Dependency.newDependency();

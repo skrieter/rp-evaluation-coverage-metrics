@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * Primary implementation of {@link IIdentifier}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AIdentifier implements IIdentifier {
     protected final IIdentifierFactory factory;

@@ -26,7 +26,7 @@ import java.io.PrintStream;
 /**
  * A {@link PrintStream} that exposes its wrapped {@link OutputStream}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class OpenPrintStream extends PrintStream {
 

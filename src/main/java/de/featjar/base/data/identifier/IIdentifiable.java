@@ -23,7 +23,7 @@ package de.featjar.base.data.identifier;
 /**
  * An object that is uniquely identified by an {@link IIdentifier}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IIdentifiable {
     /**

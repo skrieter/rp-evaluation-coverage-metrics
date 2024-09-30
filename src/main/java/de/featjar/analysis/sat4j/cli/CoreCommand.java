@@ -31,8 +31,8 @@ import java.util.Optional;
 /**
  * Computes core and dead variables for a given formula using SAT4J.
  *
- * @author Sebastian Krieter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
  */
 public class CoreCommand extends ASAT4JAnalysisCommand<BooleanAssignment, BooleanAssignment> {
 

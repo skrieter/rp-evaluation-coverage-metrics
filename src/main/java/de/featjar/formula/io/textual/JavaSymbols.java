@@ -29,8 +29,8 @@ import de.featjar.formula.structure.connective.Or;
  * Symbols for a representation like in Java. These are inherently incomplete
  * and should only be used if absolutely necessary.
  *
- * @author Timo Günther
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class JavaSymbols extends Symbols {
 

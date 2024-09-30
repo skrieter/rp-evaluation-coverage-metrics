@@ -26,7 +26,7 @@ import java.util.stream.IntStream;
 /**
  * A range option, representing a list of integer values from 1 to n.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RangeOption extends AListOption<Integer> {
 

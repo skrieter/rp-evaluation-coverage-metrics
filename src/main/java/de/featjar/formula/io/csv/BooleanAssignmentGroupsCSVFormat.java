@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 /**
  * Reads / Writes a list of configuration.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BooleanAssignmentGroupsCSVFormat implements IFormat<BooleanAssignmentGroups> {
     private static final String ASSIGNMENT_COLUMN_NAME = "ID";

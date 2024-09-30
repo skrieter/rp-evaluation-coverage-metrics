@@ -31,9 +31,9 @@ import java.util.Optional;
 /**
  * Computes number of solutions for a given formula using SAT4J.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
+ * @author anonymous
  */
 public class SolutionCountCommand extends ASAT4JAnalysisCommand<BigInteger, BigInteger> {
 

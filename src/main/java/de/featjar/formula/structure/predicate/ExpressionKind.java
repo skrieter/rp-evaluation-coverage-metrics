@@ -36,7 +36,7 @@ import java.util.stream.Stream;
  * Tests whether a given expression only contains certain kinds of elements.
  * Can be used to test whether an expression is (non-)Boolean.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface ExpressionKind extends Predicate<IExpression> {
     /**

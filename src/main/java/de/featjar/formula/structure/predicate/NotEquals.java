@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "A != B" constraints.
  * Evaluates to {@code true} iff both children evaluate to different values.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class NotEquals extends ANonTerminalExpression implements IBinaryPredicate, IInvertiblePredicate {
     protected NotEquals() {}

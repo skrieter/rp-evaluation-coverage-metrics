@@ -53,8 +53,8 @@ import org.w3c.dom.NodeList;
  * defined on the classpath by registering it in
  * {@code resources/extensions.xml}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class ExtensionManager implements AutoCloseable {
     private final LinkedHashMap<String, List<String>> extensionMap = Maps.empty();

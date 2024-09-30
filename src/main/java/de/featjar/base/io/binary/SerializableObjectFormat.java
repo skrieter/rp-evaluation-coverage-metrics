@@ -34,7 +34,7 @@ import java.io.Serializable;
  * Parses and writes serializable objects.
  *
  * @param <T> the type of the object
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class SerializableObjectFormat<T extends Serializable> implements IFormat<T> {
     @Override

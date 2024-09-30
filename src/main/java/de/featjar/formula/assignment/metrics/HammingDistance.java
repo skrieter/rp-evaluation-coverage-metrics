@@ -23,7 +23,7 @@ package de.featjar.formula.assignment.metrics;
 /**
  * Computes the Hamming distance between two literal arrays.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class HammingDistance implements IDistanceFunction {
 

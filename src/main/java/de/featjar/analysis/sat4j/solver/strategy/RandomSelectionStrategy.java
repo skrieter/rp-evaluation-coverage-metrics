@@ -20,7 +20,7 @@
  */
 /*
 
-* Copyright (C) 2023 Sebastian Krieter
+* Copyright (C) 2023 anonymous
 *
 * This file is part of FeatJAR-formula-analysis-sat4j.
 *
@@ -50,7 +50,7 @@ import org.sat4j.minisat.core.IPhaseSelectionStrategy;
 /**
  * Random phase selection.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RandomSelectionStrategy implements IPhaseSelectionStrategy {
 

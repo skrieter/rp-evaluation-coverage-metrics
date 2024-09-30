@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "at least K" constraints.
  * Evaluates to {@code true} iff at least a given number of its children evaluate to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class AtLeast extends ACardinal {
     private AtLeast(AtLeast atLeast) {

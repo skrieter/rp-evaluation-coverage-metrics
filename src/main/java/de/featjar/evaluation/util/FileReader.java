@@ -37,7 +37,7 @@ import java.util.Iterator;
 import java.util.regex.Pattern;
 
 /**
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class FileReader<T> {
 

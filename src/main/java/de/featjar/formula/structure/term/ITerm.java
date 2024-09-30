@@ -30,7 +30,7 @@ import de.featjar.formula.structure.term.value.IValue;
  * A term is either a {@link IFunction}
  * or a {@link IValue}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface ITerm extends IExpression {}

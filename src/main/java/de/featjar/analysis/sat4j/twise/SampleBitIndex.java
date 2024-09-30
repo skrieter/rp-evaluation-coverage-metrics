@@ -29,7 +29,7 @@ import java.util.function.Predicate;
  * Calculates statistics regarding t-wise feature coverage of a set of
  * solutions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class SampleBitIndex implements Predicate<int[]> {
 

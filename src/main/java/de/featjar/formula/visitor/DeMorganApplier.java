@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 /**
  * Applies De Morgan's laws to push {@link Not} down towards a {@link IPredicate}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class DeMorganApplier implements ITreeVisitor<IFormula, Void> {
     @Override

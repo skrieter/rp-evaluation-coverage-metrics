@@ -24,7 +24,7 @@ package de.featjar.formula.assignment.metrics;
  * Computes the Euclidean distance between two literal arrays. Negative literals
  * are treated as zero, positive literals as one.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class EuclideanDistance implements IDistanceFunction {
 

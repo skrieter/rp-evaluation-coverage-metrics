@@ -31,8 +31,8 @@ import java.util.Collection;
  * a {@link de.featjar.formula.assignment.BooleanSolutionList}
  * is a low-level representation of a formula in disjunctive normal form (DNF).
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class BooleanSolutionList extends ABooleanAssignmentList<BooleanSolution> {
 

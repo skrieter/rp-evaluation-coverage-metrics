@@ -42,7 +42,7 @@ import java.util.Optional;
 /**
  * Prints the formula in a readable format.
  *
- * @author Andreas Gerasimow
+ * @author anonymous
  */
 public class PrintCommand extends ACommand {
 

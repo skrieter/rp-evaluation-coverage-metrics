@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * {@link AAssignmentGroups} implementation for {@link AValueAssignment}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ValueAssignmentGroups extends AAssignmentGroups<AValueAssignment> {
 

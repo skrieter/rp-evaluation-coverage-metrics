@@ -23,7 +23,7 @@ package de.featjar.base.data.identifier;
 /**
  * Utilities for handling identifiers.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Identifiers {
     public static IIdentifier newCounterIdentifier() {

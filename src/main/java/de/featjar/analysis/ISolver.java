@@ -28,8 +28,8 @@ import java.time.Duration;
  * Solves problems expressed as logical formulas.
  * Is capable of performing various basic analyses.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface ISolver {
     Duration getTimeout();

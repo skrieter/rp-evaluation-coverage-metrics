@@ -30,8 +30,8 @@ import de.featjar.formula.structure.connective.Or;
  * Symbols for a long textual representation. These are best used for editing by
  * the user due to simplicity and ease of handling.
  *
- * @author Timo Günther
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class TextualSymbols extends Symbols {
 

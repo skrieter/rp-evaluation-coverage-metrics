@@ -25,7 +25,7 @@ import java.util.Iterator;
 /**
  * Returns features dependent on the current clauses in the formula.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class MinimumClauseHeuristic implements Iterator<DirtyFeature> {
 

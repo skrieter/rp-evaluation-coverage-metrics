@@ -26,7 +26,7 @@ import java.util.LinkedHashMap;
 /**
  * Basic implementation of a Trie data structure.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Trie {
 

@@ -28,7 +28,7 @@ import java.util.List;
  * A computation that computes two computations.
  * If any dependency fails to compute, the entire computation fails.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ComputePair<T, U> extends AComputation<Pair<T, U>> {
     protected static final Dependency<?> KEY_COMPUTATION = Dependency.newDependency();

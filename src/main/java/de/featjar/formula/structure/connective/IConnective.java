@@ -26,8 +26,8 @@ import de.featjar.formula.structure.IFormula;
  * A connective.
  * By convention, all children are formulas.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IConnective extends IFormula {
     @Override

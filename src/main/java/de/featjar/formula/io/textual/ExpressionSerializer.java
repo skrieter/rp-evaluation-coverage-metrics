@@ -43,7 +43,7 @@ import java.util.List;
 /**
  * Serializes expressions as readable text.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ExpressionSerializer implements IInOrderTreeVisitor<IExpression, String> {
 
@@ -57,7 +57,7 @@ public class ExpressionSerializer implements IInOrderTreeVisitor<IExpression, St
     /**
      * The type of notation of the formula.
      *
-     * @author Timo Günther
+     * @author anonymous
      */
     public enum Notation {
         /**

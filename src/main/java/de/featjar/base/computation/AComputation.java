@@ -36,7 +36,7 @@ import java.util.stream.Collectors;
  * Primary implementation of {@link IComputation}.
  *
  * @param <T> the type of the computation result
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AComputation<T> extends ATree<IComputation<?>> implements IComputation<T> {
 

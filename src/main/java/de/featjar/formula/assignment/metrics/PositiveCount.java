@@ -25,7 +25,7 @@ import de.featjar.formula.assignment.BooleanSolution;
 /**
  * Computes the number of positive literals in a solution.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class PositiveCount implements ICountFunction {
 

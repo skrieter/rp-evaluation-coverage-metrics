@@ -35,8 +35,8 @@ import java.util.function.Predicate;
  * Strict normal form is a special case of each normal form and usually easier to process in an automated fashion.
  * Thus, we usually allow normal forms as input and use strict normal form as output.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class ANormalFormTester implements ITreeVisitor<IFormula, Boolean>, Predicate<IFormula> {
     protected boolean isNormalForm = true;

@@ -46,7 +46,7 @@ import java.util.stream.Collectors;
 /**
  * TODO documentation
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class Evaluator extends ACommand {
 

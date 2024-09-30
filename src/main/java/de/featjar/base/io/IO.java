@@ -48,8 +48,8 @@ import java.util.function.Supplier;
  * Loading an {@link AInput} amounts to reading from its source and parsing it using a {@link IFormat}.
  * Saving an {@link AOutput} amounts to and serializing it using a {@link IFormat} and writing to its target.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class IO {
     /**

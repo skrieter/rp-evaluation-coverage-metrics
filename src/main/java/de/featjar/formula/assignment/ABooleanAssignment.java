@@ -44,8 +44,8 @@ import java.util.stream.IntStream;
  * {@link BooleanClause} (a disjunction of literals) or {@link BooleanSolution}
  * (a conjunction of literals).
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class ABooleanAssignment extends IntegerList
         implements IAssignment<Integer, Boolean>, IBooleanRepresentation {

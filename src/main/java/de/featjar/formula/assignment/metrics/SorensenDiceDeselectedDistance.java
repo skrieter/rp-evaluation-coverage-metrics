@@ -24,7 +24,7 @@ package de.featjar.formula.assignment.metrics;
  * Computes the Sørensen–Dice distance between two literal arrays. Considers
  * only negative literals.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class SorensenDiceDeselectedDistance implements IDistanceFunction {
 

@@ -27,7 +27,7 @@ import de.featjar.formula.structure.IFormula;
 /**
  * Extension point for {@link AFormats formats} for {@link IFormula}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class FormulaFormats extends AFormats<IFormula> {
     public static FormulaFormats getInstance() {

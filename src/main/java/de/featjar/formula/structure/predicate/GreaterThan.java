@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "A &gt; B" constraints.
  * Evaluates to {@code true} iff the left child evaluates to a larger value as the right child.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class GreaterThan extends ANonTerminalExpression implements IBinaryPredicate, IInvertiblePredicate {
     protected GreaterThan() {}

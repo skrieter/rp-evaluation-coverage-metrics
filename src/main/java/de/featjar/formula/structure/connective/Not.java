@@ -30,7 +30,7 @@ import java.util.Optional;
  * Expresses "not A" constraints (i.e., negation).
  * Evaluates to {@code true} iff its child evaluates to {@code false}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Not extends ANonTerminalExpression implements IConnective, IUnaryExpression {
     protected Not() {}

@@ -26,7 +26,7 @@ import java.util.function.Supplier;
  * Tracks progress of an asynchronous computation.
  * Attached to a {@link FutureResult}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Progress implements Supplier<Double> {
     protected long totalSteps;

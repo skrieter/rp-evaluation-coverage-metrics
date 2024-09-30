@@ -62,7 +62,7 @@ import de.featjar.formula.structure.term.value.Variable;
  * {@code import static de.featjar.formula.structure.Expressions.*;}.
  * Some parameters are intentionally named after their containing method to avoid inlay hints in IntelliJ IDEA.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Expressions {
     /**

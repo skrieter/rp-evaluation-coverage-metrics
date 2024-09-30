@@ -31,8 +31,8 @@ import org.xml.sax.helpers.DefaultHandler;
 /**
  * Saves line numbers in an XML document.
  *
- * @author Jens Meinicke
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class PositionalXMLHandler extends DefaultHandler {
     public static final String LINE_NUMBER_KEY_NAME = "lineNumber";

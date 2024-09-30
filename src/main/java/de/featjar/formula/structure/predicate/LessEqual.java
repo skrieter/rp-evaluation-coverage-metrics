@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "A &lt;= B" constraints.
  * Evaluates to {@code true} iff the left child evaluates to a smaller or the same value as the right child.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class LessEqual extends ANonTerminalExpression implements IBinaryPredicate, IInvertiblePredicate {
     protected LessEqual() {}

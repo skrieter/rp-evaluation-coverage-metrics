@@ -33,7 +33,7 @@ import java.util.function.Supplier;
  * The leaves of a computation tree are precisely its constant computations.
  *
  * @param <T> the type of the computed value
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ComputeConstant<T> extends ALeafNode<IComputation<?>> implements IComputation<T> {
     protected final T value;

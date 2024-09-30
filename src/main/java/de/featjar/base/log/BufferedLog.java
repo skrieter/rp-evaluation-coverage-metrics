@@ -29,8 +29,8 @@ import java.util.function.Supplier;
  * Logs messages to standard output and files. Formats log messages with
  * {@link IFormatter formatters}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class BufferedLog implements Log {
 

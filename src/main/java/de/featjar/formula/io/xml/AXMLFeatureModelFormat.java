@@ -40,8 +40,8 @@ import org.w3c.dom.NodeList;
  * @param <T> the type of read/written data
  * @param <U> the type of feature labels
  * @param <V> the type of constraint labels
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class AXMLFeatureModelFormat<T, U, V> extends AXMLFormat<T> {
     protected static final Pattern inputHeaderPattern =

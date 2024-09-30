@@ -30,7 +30,7 @@ package de.featjar.formula.structure;
  * 	<li>DNF - disjunctive normal form</li>
  * </ul>
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public enum FormulaNormalForm { // TODO: use interface instead of enum, see expression kind
     NNF,

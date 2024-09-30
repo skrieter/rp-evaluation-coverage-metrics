@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
  * Removes features from a model while retaining dependencies of all other
  * feature.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class CNFSlicer extends AComputation<BooleanClauseList> {
     protected static final Dependency<BooleanClauseList> CNF = Dependency.newDependency(BooleanClauseList.class);

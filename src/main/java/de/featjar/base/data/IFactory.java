@@ -27,6 +27,6 @@ import java.util.function.Supplier;
  * Factory to create an instance of some type.
  *
  * @param <T> the type of the created instance
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface IFactory<T> extends IExtension, Supplier<T> {}

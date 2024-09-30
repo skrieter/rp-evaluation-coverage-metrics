@@ -42,7 +42,7 @@ import java.util.stream.StreamSupport;
  * Traverses and manipulates trees. Most methods available in {@link Trees} are
  * also available on {@link ITree} instances.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Trees {
 

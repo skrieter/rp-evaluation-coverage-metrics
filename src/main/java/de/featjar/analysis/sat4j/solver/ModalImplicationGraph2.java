@@ -27,7 +27,7 @@
 // * Adjacency list implementation based on arrays. Intended to use for faster
 // * traversion.
 // *
-// * @author Sebastian Krieter
+// * @author anonymous
 // */
 // public class ModalImplicationGraph2 {
 //

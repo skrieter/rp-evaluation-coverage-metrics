@@ -54,8 +54,8 @@ import java.util.stream.Stream;
  * Note that most consumers of {@link ITree} assume it to be acyclic.
  *
  * @param <T> the type of children, the implementing type must be castable to T
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 @SuppressWarnings("unchecked")
 public interface ITree<T extends ITree<T>> extends IBrowsable<GraphVizTreeFormat<T>> {

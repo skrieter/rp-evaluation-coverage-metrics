@@ -31,7 +31,7 @@ import java.nio.file.StandardOpenOption;
 /**
  * A physical file output.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class FileOutput extends AOutput {
 

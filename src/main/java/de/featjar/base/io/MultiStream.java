@@ -29,7 +29,7 @@ import java.util.*;
  * A stream that dispatches to several streams when written to.
  * Can be used to pipe some output through to many streams.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class MultiStream extends OutputStream {
 

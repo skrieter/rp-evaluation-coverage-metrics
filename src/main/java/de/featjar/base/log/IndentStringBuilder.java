@@ -25,7 +25,7 @@ import java.util.Collection;
 /**
  * Builds multiline strings that are indented.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class IndentStringBuilder {
     protected final StringBuilder stringBuilder;

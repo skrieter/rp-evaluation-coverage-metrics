@@ -37,7 +37,7 @@ import java.io.IOException;
 /**
  * Measures time for core and atomic set analysis.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class MeasureAnalysisTimePhase extends Evaluator {
 

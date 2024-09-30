@@ -31,7 +31,7 @@ import java.util.function.Predicate;
  * Useful for debugging.
  * Implemented as a preorder traversal.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class TreePrinter implements ITreeVisitor<ITree<?>, String> {
     private final StringBuilder treeStringBuilder = new StringBuilder();

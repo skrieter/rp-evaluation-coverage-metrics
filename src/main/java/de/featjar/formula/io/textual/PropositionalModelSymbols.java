@@ -30,7 +30,7 @@ import de.featjar.formula.structure.connective.Or;
  * Symbols for a representation like in Java. These are inherently incomplete
  * and should only be used if absolutely necessary.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class PropositionalModelSymbols extends Symbols {
 

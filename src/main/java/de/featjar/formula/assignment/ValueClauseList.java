@@ -33,7 +33,7 @@ import java.util.Collection;
  * {@link ComputeCNFFormula}), a {@link ValueClauseList} is a more low-level
  * representation.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueClauseList extends AValueAssignmentList<ValueClause> {
 

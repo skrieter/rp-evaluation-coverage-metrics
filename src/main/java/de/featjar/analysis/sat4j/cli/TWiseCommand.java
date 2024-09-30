@@ -37,8 +37,8 @@ import java.util.Optional;
 /**
  * Computes solutions for a given formula using SAT4J.
  *
- * @author Sebastian Krieter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
  */
 public class TWiseCommand extends ASAT4JAnalysisCommand<BooleanSolutionList, BooleanSolutionList> {
 

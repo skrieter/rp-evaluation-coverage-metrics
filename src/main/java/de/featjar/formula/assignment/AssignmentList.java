@@ -28,8 +28,8 @@ import java.util.Objects;
 /**
  * A list of {@link Assignment assignments}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class AssignmentList implements IAssignmentList<Assignment> {
     protected final List<Assignment> literalLists;

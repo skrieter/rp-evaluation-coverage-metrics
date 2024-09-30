@@ -29,7 +29,7 @@ import java.util.List;
  * If possible, use {@link ATree} instead, which allows reusing subtrees.
  *
  * @param <T> the type of children, the implementing type must be castable to T
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class ARootedTree<T extends IRootedTree<T>> extends ATree<T> implements IRootedTree<T> {
     /**

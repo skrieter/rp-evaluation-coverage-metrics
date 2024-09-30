@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * Removes occurrences of {@link True} and {@link False} with a tautology or contradiction, respectively.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class TrueFalseRemover implements ITreeVisitor<IFormula, Void> {
     protected final Variable variable;

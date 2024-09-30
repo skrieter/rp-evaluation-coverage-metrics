@@ -41,7 +41,7 @@ import java.util.Objects;
 /**
  * Adjacency matrix implementation for a feature graph.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class MIGBuilder extends AComputation<ModalImplicationGraph> {
 

@@ -28,8 +28,8 @@ import java.util.Objects;
 /**
  * A non-terminal node in a formula.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class ANonTerminalExpression extends ATree<IExpression> implements IExpression {
     protected ANonTerminalExpression(IExpression... children) {

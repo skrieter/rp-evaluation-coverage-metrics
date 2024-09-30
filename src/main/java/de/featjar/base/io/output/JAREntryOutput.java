@@ -30,7 +30,7 @@ import java.util.jar.JarOutputStream;
  * An entry in a JAR file.
  * Used to create a {@link JARFileOutputMapper}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class JAREntryOutput extends AOutput {
     protected final Path path;

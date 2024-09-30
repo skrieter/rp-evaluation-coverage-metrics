@@ -37,7 +37,7 @@ import java.util.List;
  * remaining analysis. Clauses are added in the same order a they appear in the
  * given clauses list.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeContradictingClauses extends ASAT4JAnalysis.Solution<BooleanClauseList> {
 

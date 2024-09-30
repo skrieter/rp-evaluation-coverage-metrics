@@ -30,7 +30,7 @@ import java.util.stream.StreamSupport;
  * Combination iterator that uses the combinatorial number system to process
  * combinations in parallel.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public final class MultiLexicographicIterator<E> implements Spliterator<ICombination<E, int[]>> {
 

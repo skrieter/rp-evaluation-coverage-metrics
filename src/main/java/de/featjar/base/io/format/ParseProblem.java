@@ -28,7 +28,7 @@ import java.nio.file.Path;
  * A problem that occurs while parsing an {@link AInput}.
  * Stores a path and line number where the problem occurred.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ParseProblem extends Problem {
     // TODO: for hierarchical formats like UVL, there may be several files, so we should

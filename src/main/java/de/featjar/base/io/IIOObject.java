@@ -30,8 +30,8 @@ import java.nio.file.Paths;
  * Input or output mapped by a {@link AIOMapper}.
  * This could be a physical file, string, or stream.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IIOObject extends AutoCloseable {
     @Override

@@ -52,8 +52,8 @@ import java.util.stream.Stream;
  * An expression is either a {@link IFormula}
  * or a {@link ITerm}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IExpression extends ITree<IExpression> {
     /**

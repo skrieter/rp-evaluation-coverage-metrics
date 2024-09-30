@@ -25,7 +25,7 @@ import de.featjar.base.data.Range;
 /**
  * An expression with exactly two operands.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IBinaryExpression extends IExpression {
     default Range getChildrenCountRange() {

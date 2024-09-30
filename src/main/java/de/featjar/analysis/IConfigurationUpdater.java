@@ -28,7 +28,7 @@ import java.util.Collection;
 /**
  * Update and complete partial solutions.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  *
  */
 public interface IConfigurationUpdater {

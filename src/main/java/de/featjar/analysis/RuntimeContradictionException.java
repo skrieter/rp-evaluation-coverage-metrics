@@ -25,7 +25,7 @@ package de.featjar.analysis;
  * contradiction when adding new clauses.<br>
  * Doesn't need to be caught explicitly.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class RuntimeContradictionException extends RuntimeException {
 

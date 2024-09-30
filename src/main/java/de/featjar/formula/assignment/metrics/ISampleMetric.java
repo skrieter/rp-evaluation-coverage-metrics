@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Calculates a certain coverage for a given sample.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface ISampleMetric {
 

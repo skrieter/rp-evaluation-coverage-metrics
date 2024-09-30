@@ -29,7 +29,7 @@ import java.util.Optional;
  * Expresses "A or B" constraints (i.e., disjunction).
  * Evaluates to {@code true} iff at least one of its children evaluate to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class Or extends ANonTerminalExpression implements IConnective {
 

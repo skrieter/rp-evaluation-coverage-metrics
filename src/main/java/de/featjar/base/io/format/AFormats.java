@@ -35,8 +35,8 @@ import java.util.stream.Collectors;
  * Should be extended to manage formats for a specific kind of object.
  *
  * @param <T> the type of the read/written object
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class AFormats<T> extends AExtensionPoint<IFormat<T>> implements IFormatSupplier<T> {
     /**

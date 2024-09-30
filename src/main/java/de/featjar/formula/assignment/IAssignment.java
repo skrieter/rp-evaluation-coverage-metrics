@@ -35,8 +35,8 @@ import java.util.stream.Stream;
  *
  * @param <T> the index type of the variables
  * @param <R> the value type of the variables
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IAssignment<T, R> {
     /**

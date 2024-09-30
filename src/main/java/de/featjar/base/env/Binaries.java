@@ -25,6 +25,6 @@ import de.featjar.base.extension.AExtensionPoint;
 /**
  * Manages all native binaries bundled with FeatJAR.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Binaries extends AExtensionPoint<ABinary> {}

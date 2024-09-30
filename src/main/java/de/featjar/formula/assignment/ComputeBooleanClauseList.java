@@ -39,7 +39,7 @@ import java.util.Objects;
 /**
  * Transforms a formula, which is assumed to be in strict conjunctive normal form, into a {@link BooleanClauseList}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeBooleanClauseList extends AComputation<Pair<BooleanClauseList, VariableMap>> {
 

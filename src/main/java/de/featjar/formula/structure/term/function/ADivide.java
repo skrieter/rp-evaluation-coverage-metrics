@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Divides the values of two terms.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public abstract class ADivide extends ANonTerminalExpression implements IFunction, IBinaryExpression {
 

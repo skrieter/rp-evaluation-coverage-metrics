@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Merges nested {@link And} and {@link Or} connectives.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class AndOrMerger implements ITreeVisitor<IFormula, Void> {
     @Override

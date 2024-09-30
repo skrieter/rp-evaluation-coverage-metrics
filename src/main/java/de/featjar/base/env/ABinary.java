@@ -38,7 +38,7 @@ import java.util.concurrent.TimeUnit;
  * Only the binaries required on the current operating system should be extracted.
  * For now, the binaries are just kept in the home directory indefinitely.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class ABinary implements IExtension {
     /**

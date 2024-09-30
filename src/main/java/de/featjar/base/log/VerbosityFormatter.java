@@ -25,7 +25,7 @@ import de.featjar.base.log.Log.Verbosity;
 /**
  * Prepends the verbosity level of a message.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class VerbosityFormatter implements IFormatter {
 

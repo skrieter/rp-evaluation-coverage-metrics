@@ -26,8 +26,8 @@ package de.featjar.base.extension;
  * Initialization is done by the {@link ExtensionManager} with a public no-arg constructor, which must be available.
  * De-initialization is done with {@link #close()}.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IExtension {
 

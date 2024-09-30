@@ -26,7 +26,7 @@ import java.nio.charset.Charset;
 /**
  * A string output.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class StringOutput extends AOutput {
     /**

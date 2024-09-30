@@ -41,8 +41,8 @@ import java.util.regex.Pattern;
  * De-initialization is done with {@link #close()}.
  *
  * @param <T> the type of the loaded extensions
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class AExtensionPoint<T extends IExtension> {
     private final LinkedHashMap<String, Integer> indexMap = Maps.empty();

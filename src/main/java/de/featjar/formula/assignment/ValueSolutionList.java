@@ -32,7 +32,7 @@ import java.util.Collection;
  * a {@link de.featjar.formula.assignment.ValueSolutionList}
  * is a low-level representation of a formula in disjunctive normal form (DNF).
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class ValueSolutionList extends AValueAssignmentList<ValueSolution> {
     public ValueSolutionList() {}

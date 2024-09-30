@@ -38,7 +38,7 @@ import java.util.stream.Collectors;
  * That is, replaces {@link Implies}, {@link BiImplies}, {@link AtLeast}, {@link AtMost}, {@link Between},
  * and {@link Choose} with {@link And}, {@link Or}, and {@link Not}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ConnectiveSimplifier implements ITreeVisitor<IFormula, Void> {
 

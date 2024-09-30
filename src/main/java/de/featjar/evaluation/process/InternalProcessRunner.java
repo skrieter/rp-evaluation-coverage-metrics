@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * Can be used for debugging, in case the called FeatJAR process contains a problem.
  * 
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class InternalProcessRunner implements IProcessRunner {
 

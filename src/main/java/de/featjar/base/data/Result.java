@@ -48,8 +48,8 @@ import java.util.stream.Stream;
  * For void methods, throwing checked exceptions may be more reasonable than returning a {@link Result} object.
  *
  * @param <T> the type of the result's object
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Result<T> implements Supplier<T> {
     protected static final Result<?> EMPTY = new Result<>(null, null);

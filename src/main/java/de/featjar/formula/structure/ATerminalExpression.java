@@ -26,8 +26,8 @@ import java.util.Objects;
 /**
  * A terminal expression.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class ATerminalExpression extends ALeafNode<IExpression> implements IExpression {
     @Override

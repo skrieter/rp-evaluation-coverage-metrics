@@ -31,8 +31,8 @@ import java.util.Objects;
  * Writable output target of a {@link IFormat}.
  * Can be a physical file or arbitrary output stream.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class AOutput implements IIOObject {
     protected final OutputStream outputStream;

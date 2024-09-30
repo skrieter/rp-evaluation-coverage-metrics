@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
  * A list of value assignments.
  *
  * @param <T> the type of the literal list
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AValueAssignmentList<T extends AValueAssignment>
         implements IAssignmentList<T>, IValueRepresentation {

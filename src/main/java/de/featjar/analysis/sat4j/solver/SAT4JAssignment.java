@@ -35,8 +35,8 @@ import org.sat4j.core.VecInt;
 /**
  * ...
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class SAT4JAssignment implements IAssignment<Integer, Boolean>, Supplier<int[]> {
     protected final VecInt integers;

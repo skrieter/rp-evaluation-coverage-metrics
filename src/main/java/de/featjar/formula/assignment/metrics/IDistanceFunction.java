@@ -23,7 +23,7 @@ package de.featjar.formula.assignment.metrics;
 /**
  * Computes the distance between to literal arrays (e.g., configurations).
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface IDistanceFunction {
 

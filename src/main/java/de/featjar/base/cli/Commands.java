@@ -47,8 +47,8 @@ import java.util.stream.Collectors;
 /**
  * Helpers for running commands.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Commands extends AExtensionPoint<ICommand> {
 

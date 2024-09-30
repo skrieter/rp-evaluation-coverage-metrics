@@ -31,8 +31,8 @@ import java.util.stream.Collectors;
 /**
  * Parses and serializes a list of strings line-by-line, skipping comment and empty lines.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class StringListFormat implements IFormat<List<String>> {
     private static final String MULTILINE_COMMENT = "###";

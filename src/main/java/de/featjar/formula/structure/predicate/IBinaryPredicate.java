@@ -27,7 +27,7 @@ import java.util.Optional;
 /**
  * A binary predicate.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IBinaryPredicate extends IPredicate, IBinaryExpression {
     @SuppressWarnings("rawtypes")

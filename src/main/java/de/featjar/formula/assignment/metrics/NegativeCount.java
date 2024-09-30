@@ -25,7 +25,7 @@ import de.featjar.formula.assignment.BooleanSolution;
 /**
  * Computes the number of negative literals in a solution.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class NegativeCount implements ICountFunction {
 

@@ -37,7 +37,7 @@ import java.util.stream.IntStream;
 /**
  * Finds indeterminate features.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeIndeterminateSat4J extends ASAT4JAnalysis.Solution<BooleanAssignment> {
 

@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Transforms an indexed CNF representation into an {@link BooleanAssignmentGroups}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class ComputeBooleanAssignmentGroups<U extends IBooleanRepresentation>
         extends AComputation<BooleanAssignmentGroups> {

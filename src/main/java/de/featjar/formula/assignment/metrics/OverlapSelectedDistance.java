@@ -24,7 +24,7 @@ package de.featjar.formula.assignment.metrics;
  * Computes the Overlap distance between two literal arrays. Considers only
  * positive literals.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class OverlapSelectedDistance implements IDistanceFunction {
 

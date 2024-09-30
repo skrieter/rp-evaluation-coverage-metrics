@@ -26,7 +26,7 @@ import java.util.function.Supplier;
 
 /**
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public final class ProgressBar {
 

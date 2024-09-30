@@ -41,8 +41,8 @@ import java.util.stream.Stream;
  * Readable input source of a {@link IFormat}.
  * Can be a physical file, string, or arbitrary input stream.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public abstract class AInput implements IIOObject {
     protected final InputStream inputStream;

@@ -51,8 +51,8 @@ import java.util.stream.Collectors;
 /**
  * Parses a list of strings.
  *
- * @author Elias Kuiter
- * @author Sebastian Krieter
+ * @author anonymous
+ * @author anonymous
  */
 public class OptionList {
 

@@ -36,8 +36,8 @@ import java.util.function.Supplier;
  * For serializing, one or multiple {@link AOutput outputs} are written to an {@link AOutputMapper} or a {@link String}.
  *
  * @param <T> the type of the read/written object
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public interface IFormat<T> extends IExtension {
 

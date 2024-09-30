@@ -28,7 +28,7 @@ import java.util.Optional;
  * An object that can be annotated with {@link Attribute} values to store
  * additional metadata.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IAttributable {
     Optional<Map<IAttribute<?>, Object>> getAttributes();

@@ -28,7 +28,7 @@ import java.util.List;
  * Expresses "at most K" constraints.
  * Evaluates to {@code true} iff at most a given number of its children evaluate to {@code true}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class AtMost extends ACardinal {
     private AtMost(AtMost atMost) {

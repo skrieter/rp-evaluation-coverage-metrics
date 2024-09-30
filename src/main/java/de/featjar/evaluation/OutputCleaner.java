@@ -27,7 +27,7 @@ import java.util.Optional;
 /**
  * Reset current output path.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class OutputCleaner extends Evaluator {
 

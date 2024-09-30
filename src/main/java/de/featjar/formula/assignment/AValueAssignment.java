@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
  * Assigns values of any type to string-identified {@link de.featjar.formula.structure.term.value.Variable variables}.
  * Can be used to represent a set of equalities for use in an SMT {@link ISolver}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public abstract class AValueAssignment implements IAssignment<Integer, Object>, IValueRepresentation {
     final LinkedHashMap<Integer, Object> variableValuePairs;

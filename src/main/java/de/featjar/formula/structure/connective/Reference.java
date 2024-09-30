@@ -54,8 +54,8 @@ import java.util.function.Function;
  * Use {@link #setFreeVariables(Collection)} to specify additional variables.
  * This is, for instance, useful when loading a formula from a format such as DIMACS, which allows to specify variables without including them in the actual formula.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class Reference extends ANonTerminalExpression implements IConnective, IUnaryExpression {
 

@@ -33,8 +33,8 @@ import java.util.Collection;
  * mandates the minimum length of the underlying array. The same index may not
  * occur multiple times, but indices may be 0 for partial solutions.
  *
- * @author Sebastian Krieter
- * @author Elias Kuiter
+ * @author anonymous
+ * @author anonymous
  */
 public class BooleanSolution extends ABooleanAssignment implements ISolution<Integer, Boolean> {
 

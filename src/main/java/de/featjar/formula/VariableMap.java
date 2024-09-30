@@ -62,7 +62,7 @@ import java.util.stream.Collectors;
  * {@link de.featjar.formula.structure.term.value.Variable} in a
  * {@link IFormula}.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class VariableMap extends RangeMap<String> {
     public VariableMap() {}

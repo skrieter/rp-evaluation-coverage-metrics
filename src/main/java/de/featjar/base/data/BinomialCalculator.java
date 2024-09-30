@@ -23,7 +23,7 @@ package de.featjar.base.data;
 /**
  * Computes binomial coefficients and factorial.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class BinomialCalculator {
 

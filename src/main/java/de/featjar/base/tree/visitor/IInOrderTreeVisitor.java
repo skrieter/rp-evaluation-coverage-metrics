@@ -31,7 +31,7 @@ import java.util.List;
  *
  * @param <T> the type of tree
  * @param <U> the type of result
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface IInOrderTreeVisitor<T extends ITree<?>, U> extends ITreeVisitor<T, U> {
 

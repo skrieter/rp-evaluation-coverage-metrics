@@ -38,8 +38,8 @@ import java.util.stream.IntStream;
 /**
  * Removes solutions from a given sample without reducing the t-wise interaction coverage for a given t.
  *
- * @author Sebastian Krieter
- * @author Rahel Sundermann
+ * @author anonymous
+ * @author anonymous
  */
 public class GreedySampleReducer extends AComputation<List<BooleanSolution>> {
 

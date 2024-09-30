@@ -26,7 +26,7 @@ import de.featjar.formula.assignment.BooleanSolution;
  * Computes the count of some property within a literal array (e.g., number of
  * positive literals).
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public interface ICountFunction {
 

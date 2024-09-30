@@ -32,8 +32,8 @@ import java.util.List;
 /**
  * Merges nested {@link And} and {@link Or} connectives.
  *
- * @author Sebastian Krieter
- * @author Andreas Gerasimow
+ * @author anonymous
+ * @author anonymous
  */
 public class TreeSimplifier implements ITreeVisitor<IFormula, Void> {
     @Override

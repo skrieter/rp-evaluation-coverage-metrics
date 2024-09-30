@@ -28,7 +28,7 @@ import java.util.Optional;
  * Expresses a contradiction.
  * Always evaluates to {@code false}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class False extends ATerminalExpression implements IPolarPredicate {
 

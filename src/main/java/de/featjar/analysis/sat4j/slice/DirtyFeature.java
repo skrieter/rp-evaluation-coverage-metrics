@@ -24,7 +24,7 @@ package de.featjar.analysis.sat4j.slice;
  * Representation of a feature that will be removed from a feature model by the
  * {@link CNFSlicer}.
  *
- * @author Sebastian Krieter
+ * @author anonymous
  */
 public class DirtyFeature implements Comparable<DirtyFeature> {
 

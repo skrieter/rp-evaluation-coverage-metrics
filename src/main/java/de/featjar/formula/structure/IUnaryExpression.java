@@ -25,7 +25,7 @@ import de.featjar.base.data.Range;
 /**
  * An expression with exactly one operand.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IUnaryExpression extends IExpression {
     default Range getChildrenCountRange() {

@@ -27,7 +27,7 @@ import java.util.function.Function;
  * Describes metadata that can be attached to an object.
  * an {@link IAttribute} does not store any attribute values, it only acts as a key or descriptor.
  *
- * @author Elias Kuiter
+ * @author anonymous
  */
 public interface IAttribute<T> extends Function<IAttributable, Result<T>> {
     String getNamespace();

@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
  * Allows to set a default value.
  *
  * @param <T> the type of the option's value
- * @author Elias Kuiter
+ * @author anonymous
  */
 public class Option<T> {
 
