@@ -27,6 +27,14 @@ To run this evaluation you require the following packages on your systems:
 - Python, Version 3
 - Git LFS
 
+## Setup
+Before running the evaluation the right permissions for the different evaluation-steps have to be set.
+For this the following commands need to be run:
+```
+chmod +x 0_permissions.sh
+./0_permissions.sh
+```
+
 ## Run the Complete Evaluation
 To run the complete evaluation execute the `evaluation.sh` script, which will perform the setup, run the actual evaluation, and produce the plots:
 ```
