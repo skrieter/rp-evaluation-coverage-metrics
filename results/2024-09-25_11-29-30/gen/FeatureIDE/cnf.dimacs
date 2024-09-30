@@ -1,0 +1,47 @@
+c 1 Eclipse
+c 2 JDT
+c 3 CDT
+c 4 AJDT
+c 5 FeatureModeling
+c 6 CIDE
+c 7 FAMILIAR
+c 8 FeatureIDE
+c 9 AHEAD
+c 10 FeatureHouse
+c 11 FeatureCpp
+c 12 DeltaJ
+c 13 AspectJ
+c 14 Munge
+c 15 Antenna
+c 16 DeltaMontiArc
+c 17 ExtendedFM
+c 18 MoSoPoLiTe
+c 19 DeltaJEclipsePlugin
+p cnf 19 27
+1 0
+-2 1 0
+-3 1 0
+-4 1 0
+-5 1 0
+-6 5 0
+-7 5 0
+-8 5 0
+-9 8 0
+-10 8 0
+-11 8 0
+-12 8 0
+-13 8 0
+-14 8 0
+-15 8 0
+-16 8 0
+-8 9 10 11 12 13 14 15 16 0
+-17 5 0
+-18 5 0
+-19 1 0
+-15 2 0
+-14 2 0
+-10 2 0
+-9 2 0
+-11 3 0
+-13 4 0
+-12 19 0

@@ -1,0 +1,138 @@
+c 1 GPL
+c 2 MainGpl
+c 3 TestProg
+c 4 Alg
+c 5 Number
+c 6 Connected
+c 7 StrongC
+c 8 Transpose
+c 9 StronglyConnected
+c 10 Cycle
+c 11 MSTPrim
+c 12 MSTKruskal
+c 13 Src
+c 14 BFS
+c 15 DFS
+c 16 HiddenWgt
+c 17 WeightOptions
+c 18 WeightedWithEdges
+c 19 WeightedWithNeighbors
+c 20 WeightedOnlyVertices
+c 21 Wgt
+c 22 Weighted
+c 23 Unweighted
+c 24 HiddenGtp
+c 25 DirectedWithEdges
+c 26 DirectedWithNeighbors
+c 27 DirectedOnlyVertices
+c 28 UndirectedWithEdges
+c 29 UndirectedWithNeighbors
+c 30 UndirectedOnlyVertices
+c 31 Gtp
+c 32 Directed
+c 33 Undirected
+c 34 Implementation
+c 35 OnlyVertices
+c 36 WithNeighbors
+c 37 WithEdges
+c 38 Base
+p cnf 38 99
+1 0
+-2 1 0
+-3 2 0
+-2 3 0
+-4 2 0
+-2 4 0
+-5 4 0
+-6 4 0
+-7 4 0
+-8 7 0
+-7 8 0
+-9 7 0
+-7 9 0
+-10 4 0
+-11 4 0
+-12 4 0
+-4 5 6 7 10 11 12 0
+-13 2 0
+-14 13 0
+-15 13 0
+-13 14 15 0
+-15 -14 0
+-16 2 0
+-2 16 0
+-17 16 0
+-18 17 0
+-19 17 0
+-20 17 0
+-16 17 0
+-21 2 0
+-2 21 0
+-22 21 0
+-23 21 0
+-21 22 23 0
+-23 -22 0
+-24 2 0
+-2 24 0
+-25 24 0
+-26 24 0
+-27 24 0
+-28 24 0
+-29 24 0
+-30 24 0
+-24 25 26 27 28 29 30 0
+-26 -25 0
+-27 -25 0
+-28 -25 0
+-29 -25 0
+-30 -25 0
+-27 -26 0
+-28 -26 0
+-29 -26 0
+-30 -26 0
+-28 -27 0
+-29 -27 0
+-30 -27 0
+-29 -28 0
+-30 -28 0
+-30 -29 0
+-31 2 0
+-2 31 0
+-32 31 0
+-33 31 0
+-31 32 33 0
+-33 -32 0
+-34 2 0
+-2 34 0
+-35 34 0
+-36 34 0
+-37 34 0
+-34 35 36 37 0
+-36 -35 0
+-37 -35 0
+-37 -36 0
+-38 2 0
+-2 38 0
+-1 2 0
+-5 13 0
+-5 31 0
+-6 13 0
+-6 33 0
+-7 15 0
+-7 32 0
+-10 15 0
+-10 31 0
+-11 22 0
+-12 22 0
+-11 33 0
+-12 33 0
+-12 -11 0
+-35 -22 20 0
+-36 -22 19 0
+-37 -22 18 0
+-35 -32 27 0
+-36 -32 26 0
+-37 -32 25 0
+-35 -33 30 0
+-36 -33 29 0
+-37 -33 28 0

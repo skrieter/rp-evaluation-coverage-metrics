@@ -25,6 +25,7 @@
 ## Prerequisites
 To run this evaluation you require the following packages on your systems:
 - Python, Version 3
+- Git LFS
 
 ## Run the Complete Evaluation
 To run the complete evaluation execute the `evaluation.sh` script, which will perform the setup, run the actual evaluation, and produce the plots:
@@ -84,3 +85,5 @@ Once all phases ran successfully, plots can be created using the following comma
 python3 plot.py
 ```
 The plot can be found in `results/"time-stamp"/plot`
+
+The data used in our paper can be found in `results/2024-09-25_11-29-30`

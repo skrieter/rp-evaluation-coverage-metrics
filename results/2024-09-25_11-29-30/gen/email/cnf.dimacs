@@ -1,0 +1,28 @@
+c 1 Email
+c 2 Base
+c 3 Keys
+c 4 Encrypt
+c 5 AutoResponder
+c 6 Addressbook
+c 7 Sign
+c 8 Forward
+c 9 Verify
+c 10 Decrypt
+p cnf 10 17
+1 0
+-2 1 0
+-1 2 0
+-3 1 0
+-4 1 0
+-5 1 0
+-6 1 0
+-7 1 0
+-8 1 0
+-9 1 0
+-10 1 0
+-4 10 0
+-10 4 0
+-7 9 0
+-9 7 0
+-7 3 0
+-4 3 0

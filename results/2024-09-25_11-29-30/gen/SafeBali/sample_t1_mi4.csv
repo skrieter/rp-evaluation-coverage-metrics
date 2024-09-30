@@ -1,0 +1,5 @@
+Configuration;Bali;Tool;A;requireBali2jak;bali2jak;B;requireBali2jcc;bali2jcc;C;requireComposer;composer;D;bali2layerGUI;bali2layer;bali2layerOptions;codegen;Base;require;requireSyntax;collect;visitor;bali;syntax;kernel
+0;+;+;-;-;-;-;-;-;+;+;+;-;-;-;-;+;+;-;+;+;+;+;+;+
+1;+;+;-;-;-;+;+;+;-;-;-;-;-;-;-;+;+;-;+;+;+;+;+;+
+2;+;+;-;-;-;-;-;-;-;-;-;+;+;+;+;+;+;+;-;+;+;+;+;+
+3;+;+;+;+;+;-;-;-;-;-;-;-;-;-;-;+;+;-;-;+;+;+;+;+

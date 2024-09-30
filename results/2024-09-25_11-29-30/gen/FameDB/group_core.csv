@@ -1,0 +1,3 @@
+ID;Group;DB;OS;NutOS;Win;BufferMgr;Persistent;MemAlloc;Static;Dynamic;PageRepl;LRU;LFU;InMemory;DebugLogging;Storage;API;get;put;delete;Index;BTree;Unindexed
+0;0;+;+;0;0;+;0;0;0;0;0;0;0;0;0;+;+;0;0;0;+;0;0
+1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0

@@ -1,0 +1,3 @@
+ID;Group;Sorting;Sorting_C;SortWP;MetalPlastic;LightDark;CountWP;AlarmFunction;DistributeWP;SeparateWP;HandoverMetal;RejectsWithCap;RejectsWithoutCap;Sorting_M;StationDistributing;Transporter;Gripper;StationInspecting;StationSeparating;StationSorting;Chute1;Chute2;Chute3;StationHandling;Sorting_E;Pneumatics;Switch1;Switch2;EE;MotorOfConveyor;Sensors;Lightbarrier;IndSensor;OptSensor;Sorting_S;CountWPS;Processed;SortingWP;MetalPlasticS;LightDarkS
+0;0;+;+;+;0;0;0;0;0;+;0;0;0;+;+;0;0;0;0;+;0;0;0;0;+;+;0;0;+;0;+;0;0;0;+;+;0;+;0;0
+1;0;0;0;0;+;+;+;+;+;0;+;+;+;0;0;+;+;+;+;0;+;+;+;+;0;0;+;+;0;+;0;+;+;+;0;0;+;0;+;+
