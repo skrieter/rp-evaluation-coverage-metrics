@@ -25,14 +25,13 @@
 ## Prerequisites
 To run this evaluation you require the following packages on your systems:
 - Python, Version 3
-- Git LFS
 
 ## Setup
-Before running the evaluation the right permissions for the different evaluation-steps have to be set.
+Before running the replication package needs some setup.
 For this the following commands need to be run:
 ```
-chmod +x 0_permissions.sh
-./0_permissions.sh
+chmod +x 0_rp-setup.sh
+./0_rp-setup.sh
 ```
 
 ## Run the Complete Evaluation
@@ -51,6 +50,12 @@ source ./1_setup.sh
 ## Step by Step
 
 ### Build and Setup
+Execute the following script to unpack the rp-data:
+```
+chmod +x 0_rp-setup.sh
+./0_rp-setup.sh
+```
+
 Execute the following gradle task to build the executable jar file and unzip the `model.zip` containing the feature model:
 ```
 ./gradlew build
