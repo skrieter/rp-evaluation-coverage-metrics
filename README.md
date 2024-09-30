@@ -34,7 +34,7 @@ To run the complete evaluation execute the `evaluation.sh` script, which will pe
 **or** run the stages of this evaluation separately:
 
 ```
-./1_setup.sh
+source ./1_setup.sh
 ./2_run.sh
 ./3_plot.sh
 ```
