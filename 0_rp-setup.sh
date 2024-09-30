@@ -5,4 +5,4 @@ chmod +x 3_plot.sh
 chmod +x evaluation.sh
 
 cat results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/part_* > results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/partial_coverage.zip
-unzip results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/partial_coverage.zip
+unzip results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/partial_coverage.zip -d results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/
