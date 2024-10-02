@@ -1,5 +1,7 @@
-# Evaluation of different t-wise coverage metrics
+[![GitHubPages](https://img.shields.io/badge/GitHub%20Pages-online-blue.svg?style=flat)][website]
 
+# Coverage Metrics for T-Wise Feature Interactions
+This is the replication package for our paper _Coverage Metrics for T-Wise Feature Interactions_.
 ## Structure
 + __build__\
   Build folder produced by gradle. Contains the compiled, executable jar file.
@@ -13,11 +15,11 @@
   Contains the feature models of the configurable systems used in the evaluation.
 + __results__\
   Result folder created by running the evaluation. Contains the raw data and generated plots.
-  + __"timestamp"/data__\
+  + __\<timestamp\>/data__\
     Contains csv files with the raw data produced by the evaluation.
-  + __"timestamp"/gen__\
+  + __\<timestamp\>/gen__\
     Contains samples created by the evaluation.
-  + __"timestamp"/plot__\
+  + __\<timestamp\>/plot__\
     Contains the plots created by the python plot script.
 + __src__\
   Contains the source files.
@@ -28,21 +30,27 @@ To run this evaluation you require the following packages on your systems:
 - Gradlew, Version 8.10
 
 ## Setup
-Before running the replication package, all the scripts, as well as the `gradlew`-file need execute rights.
-To make it easier just run;
-```
+Before running the replication package, all the shell-scripts, as well as the `gradlew`-file need execute rights.
+For this you can simply use our prepared script like this:
+```bash
 chmod +x 0_permissions.sh
 ./0_permissions.sh
 ```
 
-## Run the Complete Evaluation
+## Evaluation
+### Data from the Paper
+In [results/2024-09-25_11-29-30](results/2024-09-25_11-29-30) we provide the data used in our paper.  
+Under [results/2024-09-25_11-29-30/plot](results/2024-09-25_11-29-30/plot) you can also find all the plots generated from that data.
+
+
+### Run the Evaluation
 To run the complete evaluation execute the `evaluation.sh` script, which will perform the setup, run the actual evaluation, and produce the plots:
-```
+```bash
 ./evaluation.sh
 ```
 **or** run the stages of this evaluation separately:
 
-```
+```bash
 source ./1_setup.sh
 ./2_run.sh
 ./3_plot.sh
@@ -101,3 +109,5 @@ python3 plot.py
 The plot can be found in `results/"time-stamp"/plot`
 
 The data used in our paper can be found in `results/2024-09-25_11-29-30`
+
+[website]: https://t-wise-coverage.github.io
