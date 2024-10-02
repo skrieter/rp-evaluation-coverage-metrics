@@ -104,7 +104,6 @@ task deletePartFiles {
 
 unzipCombinedFile.dependsOn combineZipParts
 unzipCombinedFile.finalizedBy deletePartFiles
-
-assemble.finalizedBy unzipCombinedFile
+setupModels.dependsOn combineZipParts
 
 assemble.finalizedBy setupModels
