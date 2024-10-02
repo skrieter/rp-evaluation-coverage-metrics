@@ -1,3 +1,6 @@
+import java.nio.file.Files
+import java.nio.file.StandardOpenOption
+
 plugins {
     id 'java'
     id 'application'
@@ -53,5 +56,31 @@ task setupModels(type: Copy) {
         }
     }
 }
+
+task combineZipParts {
+    description = 'Combines ZIP parts into one complete ZIP file'
+    doLast {
+        def partFiles = fileTree('results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/').matching {
+            include 'part_*'
+        }.files.sort()
+
+        def outputFile = file('results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/partial_coverage.zip')
+
+        outputFile.withOutputStream { outStream ->
+            partFiles.each { file ->
+                outStream << file.bytes
+            }
+        }
+    }
+}
+
+task unzipCombinedFile(type: Copy) {
+    description = 'Unzips the combined ZIP file'
+    dependsOn combineZipParts
+    from zipTree('results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/partial_coverage.zip')
+    into 'results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/'
+}
+
+unzipCombinedFile.dependsOn combineZipParts
 
 assemble.finalizedBy setupModels
