@@ -24,12 +24,12 @@ application {
 }
 
 jar {
-  manifest {
-    attributes(
-      'Main-Class': 'de.featjar.base.FeatJAR'
-    )
-    archiveBaseName = 'rp-evaluation-coverage-metrics'
-  }
+    manifest {
+        attributes(
+                'Main-Class': 'de.featjar.base.FeatJAR'
+        )
+        archiveBaseName = 'rp-evaluation-coverage-metrics'
+    }
 }
 
 shadowJar {
@@ -81,6 +81,30 @@ task unzipCombinedFile(type: Copy) {
     into 'results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/'
 }
 
+task deletePartFiles {
+    description = 'Deletes ZIP part files and combined ZIP file after unzipping'
+    dependsOn unzipCombinedFile
+    doLast {
+        // Delete part files
+        def partFiles = fileTree('results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/').matching {
+            include 'part_*'
+        }.files
+
+        partFiles.each { file ->
+            file.delete()
+        }
+
+        // Delete the combined ZIP file
+        def combinedZip = file('results/2024-09-25_11-29-30/data/data-2024-09-26_10-55-02/partial_coverage.zip')
+        if (combinedZip.exists()) {
+            combinedZip.delete()
+        }
+    }
+}
+
 unzipCombinedFile.dependsOn combineZipParts
+unzipCombinedFile.finalizedBy deletePartFiles
+
+assemble.finalizedBy unzipCombinedFile
 
 assemble.finalizedBy setupModels
