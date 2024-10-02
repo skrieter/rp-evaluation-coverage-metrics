@@ -28,11 +28,11 @@ To run this evaluation you require the following packages on your systems:
 - Gradlew, Version 8.10
 
 ## Setup
-Before running the replication package needs some setup.
-For this the following commands need to be run:
+Before running the replication package, all the scripts, as well as the `gradlew`-file need execute rights.
+To make it easier just run;
 ```
-chmod +x 0_rp-setup.sh
-./0_rp-setup.sh
+chmod +x 0_permissions.sh
+./0_permissions.sh
 ```
 
 ## Run the Complete Evaluation

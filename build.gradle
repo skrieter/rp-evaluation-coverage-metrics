@@ -102,8 +102,4 @@ task deletePartFiles {
     }
 }
 
-assemble.finalizedBy combineZipParts
-
-combineZipParts.finalizedBy unzipCombinedFile
-unzipCombinedFile.finalizedBy deletePartFiles
-deletePartFiles.finalizedBy setupModels
+assemble.finalizedBy setupModels
