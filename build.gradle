@@ -102,8 +102,8 @@ task deletePartFiles {
     }
 }
 
-unzipCombinedFile.dependsOn combineZipParts
-unzipCombinedFile.finalizedBy deletePartFiles
-setupModels.dependsOn combineZipParts
+assemble.finalizedBy combineZipParts
 
-assemble.finalizedBy setupModels
+combineZipParts.finalizedBy unzipCombinedFile
+unzipCombinedFile.finalizedBy deletePartFiles
+deletePartFiles.finalizedBy setupModels
