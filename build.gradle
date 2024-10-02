@@ -25,7 +25,14 @@ jar {
     attributes(
       'Main-Class': 'de.featjar.base.FeatJAR'
     )
+    archiveBaseName = 'rp-evaluation-coverage-metrics'
   }
+}
+
+shadowJar {
+    archiveBaseName.set('rp-evaluation-coverage-metrics-all')
+    archiveClassifier.set('')
+    archiveVersion.set('1.0')
 }
 
 java {
