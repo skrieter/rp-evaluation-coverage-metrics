@@ -3,7 +3,7 @@
 ## Structure
 + __build__\
   Build folder produced by gradle. Contains the compiled, executable jar file.
-  - __libs/evaluation-coverage-metrics-1.0-all.jar__\
+  - __libs/rp-evaluation-coverage-metrics-1.0-all.jar__\
   The executable jar file.
 + __config__\
   Contains configuration files for the evaluation phases.
@@ -25,6 +25,7 @@
 ## Prerequisites
 To run this evaluation you require the following packages on your systems:
 - Python, Version 3
+- Gradlew, Version 8.10
 
 ## Setup
 Before running the replication package needs some setup.
