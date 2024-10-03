@@ -1,7 +1,8 @@
 [![GitHubPages](https://img.shields.io/badge/GitHub%20Pages-online-blue.svg?style=flat)][website]
 
 # Coverage Metrics for T-Wise Feature Interactions
-This is the replication package for our paper _Coverage Metrics for T-Wise Feature Interactions_.
+This is the replication package for our paper _Coverage Metrics for T-Wise Feature Interactions.  
+
 ## Structure
 + __build__\
   Build folder produced by gradle. Contains the compiled, executable jar file.
@@ -42,34 +43,33 @@ chmod +x 0_permissions.sh
 In [results/2024-09-25_11-29-30](results/2024-09-25_11-29-30) we provide the data used in our paper.  
 Under [results/2024-09-25_11-29-30/plot](results/2024-09-25_11-29-30/plot) you can also find all the plots generated from that data.
 
+If you want to replicate our results, you can either look at the *Quickstart-Guide* or run the evaluation *Step-by-Step*. 
 
-### Run the Evaluation
+### Quickstart Guide
 To run the complete evaluation execute the `evaluation.sh` script, which will perform the setup, run the actual evaluation, and produce the plots:
 ```bash
 ./evaluation.sh
 ```
-**or** run the stages of this evaluation separately:
+**alternatively** you can run the stages of this evaluation separately:
 
 ```bash
 source ./1_setup.sh
+```
+```bash
 ./2_run.sh
+```
+```bash
 ./3_plot.sh
 ```
 
 ## Step by Step
 
 ### Build and Setup
-Execute the following script to unpack the rp-data:
-```
-chmod +x 0_rp-setup.sh
-./0_rp-setup.sh
-```
-
 Execute the following gradle task to build the executable jar file and unzip the `model.zip` containing the feature model:
 ```
 ./gradlew build
 ```
-The resulting Jar can be found in `build/libs/evaluation-coverage-metrics-1.0-all.jar` and can be called directly.
+The resulting Jar can be found in `build/libs/evaluation-coverage-metrics-all-1.0.jar` and can be called directly.
 
 To set up the python environment for plotting the data run:
 ```
@@ -85,7 +85,7 @@ source python_plot_environment/bin/activate
 ```
 
 ### Run
-The evaluation is run in multiple phases. To run a phase execute the follwing gradle task:
+The evaluation is run in multiple phases. To run a phase execute the following gradle task:
 ```
 ./gradlew run --args="--config_dir config --config <phase_name>"
 ```
@@ -98,7 +98,10 @@ The following phases exist and should be run in order for the complete evaluatio
 4. sample
 5. partial_coverage
 
-A new directory `results` will be created, containing all generated files.
+A new directory `results` will be created in the prepare-phase, containing all generated files.  
+
+The [.current](results/.current)-File always saves the folder that was last created by the prepare-phase.  
+If you want to execute any of the phases for a previous folder, you need to paste the time-stamp of that folder into the file.
 
 ### Create Plots
 
@@ -106,8 +109,8 @@ Once all phases ran successfully, plots can be created using the following comma
 ```
 python3 plot.py
 ```
-The plot can be found in `results/"time-stamp"/plot`
+The plot can be found in `results/<time-stamp>/plot`.
 
-The data used in our paper can be found in `results/2024-09-25_11-29-30`
+The data used in our paper can be found in `results/2024-09-25_11-29-30`.
 
 [website]: https://t-wise-coverage.github.io
